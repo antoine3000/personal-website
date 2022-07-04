@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">Dok - documentation system</title>
+<meta content="documentation system" name="description"/>
+<meta content="Dok" property="schema:name"/>
+<meta content="documentation system" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main page page--article">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">Dok</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">Content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">About</a>
+</li>
+</ul>
+</nav>
+</header>
+<!-- content -->
+<article class="article index" id="output-devices">
+<h1 class="article__title">Output devices</h1>
+<p class="article__tags">Tags:
+        
+        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<section class="index index--list">
+<ul class="index__list">
+<li class="index__item">
+<a class="index__link" href="incubator.html">Prototyping an incubator</a>
+<span class="index__update">16/04/2020</span>
+</li>
+</ul>
+</section>
+<section class="article__content ts" id="content">
+<p>This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.</p>
+<p>I'm going to lend a hand to <a class="external" href="https://maudb.gitlab.io/dok/" target="_blank">Maud Bausier</a>, my partner, who is building an incubator to grow mycelium or any fermented food (tempeh, sriracha, etc.). I think we could have enough material to finish a prototype at home (covid-19 restrictions).</p>
+<p>The main challenges for the moment concern electronics, which consists of: a thermistor (to know the temperature inside the incubator), a Peltier (to heat it), a fan (to cool it), an LCD screen (to know what's going on) and two push buttons to set the desired temperature inside the incubator.</p>
+<figure class="md"><img alt="incubator prototype" loading="lazy" src="medias/output-devices-incubator-overview.jpg"><figcaption>incubator prototype</figcaption></figure>
+<hr/>
+<p>Part of this assignment is also covered on my final project's page.</p>
+<p><a class="btn internal" href="green-observatory-output.html">The Green Observatory: Output</a></p>
+<hr/>
+<h1 id="motors">Motors</h1>
+<p>But first, I needed some basics about motors: a motor is mainly made of coils and magnets. When current goes through a coil, a magnetic field is generated around it. The higher the current, the greater the field. This magnetic field creates polarity which is used to create a rotational force. This force is called <a class="external" href="https://en.wikipedia.org/wiki/Torque" target="_blank">the torque</a> and its value depends on the motor's input current. More current implies stronger magnetic field in the coils, that means more attraction/repulsion.</p>
+<figure class="md"><img alt="motor coils" loading="lazy" src="medias/output-devices-motor-coils.png"><figcaption>motor coils</figcaption></figure>
+Image source: <a class="external" href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/" target="_blank">ITP Physical Computing</a></p>
+<h2 id="dc-motor">DC motor</h2>
+<p>Maybe the simplest and most common motor in electronics, it converts current electrical energy into mechanical energy. The motor spins in one direction. Switching its polarity changes its direction. Varying the current supplied varies the speed of the motor.</p>
+<p>There are two main kinds of DC motor: the brushed one and the brushless one. The first one is more commonly used because it is the cheaper one. The brushless is bit more expensive, but it is less noisy and can last a lot longer because it doesn't need to be maintained, simply because there is almost no friction inside it.</p>
+<figure class="md"><img alt="DC brush motor" loading="lazy" src="medias/output-devices-dc-brush.jpg"><figcaption>DC brush motor</figcaption></figure>
+Image source: <a class="external" href="https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one#what-makes-a-motor-move-" target="_blank">Sparkfun: Motors and selecting the right one</a></p>
+<h2 id="stepper-motor">Stepper motor</h2>
+<blockquote>
+<p>Stepper motors are different than regular DC motors in that they don’t turn continuously, but move in a series of steps. A stepper motor is a motor that has multiple coils, not just one. By energizing each coil in sequence, you attract the shaft magnets to each coil in the sequence, and you can turn the motor in precise steps, rather than simply rotating continually.</p>
+</blockquote>
+<figure class="md"><img alt="stepper motor" loading="lazy" src="medias/output-devices-stepper-motor.jpg"><figcaption>stepper motor</figcaption></figure>
+<p>Source: <a class="external" href="https://itp.nyu.edu/physcomp/lessons/dc-motors/dc-motors-the-basics/" target="_blank">ITP Physical Computing</a></p>
+<h2 id="servo">Servo</h2>
+<blockquote>
+<p>A Servo is a small device that has an output shaft. This shaft can be positioned to specific angular positions by sending the servo a coded signal. As long as the coded signal exists on the input line, the servo will maintain the angular position of the shaft. As the coded signal changes, the angular position of the shaft changes.</p>
+<blockquote>
+<p><a class="external" href="http://www.seattlerobotics.org/guide/servos.html" target="_blank">Seattle Robotic Society</a></p>
+</blockquote>
+</blockquote>
+<figure class="md"><img alt="Servo motor" loading="lazy" src="medias/output-devices-servo-motor.jpg"><figcaption>Servo motor</figcaption></figure>
+Image source: <a class="external" href="https://www.youtube.com/watch?v=LXURLvga8bQ" target="_blank">How Servo Motors Work &amp; How To Control Servos using Arduino</a></p>
+<p>As we can see on the image above, a servo motor is composed by a DC motor, a potentionmeter and embedded circuit to control them.</p>
+<p>Servo motor appears to be the perfect candidate when we need a full control of the rotation angle, direction and speed of a motor.</p>
+<h1 id="mosfet">MOSFET</h1>
+<p>A MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is a semiconductor device which is used for switching electronic signals.</p>
+<p class="todo">To do: MOSFET description</p>
+<h1 id="lcd-screen">LCD screen</h1>
+<p class="todo">To do: LCD screen description</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 15/04/2020</p>
+<p>⁂ <span>Updated</span> 02/11/2020</p>
+</footer>
+</article>
+<!-- /content -->
+<footer class="footer">
+<p>Dok ☼ 2021 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">Dok - documentation system</title>
+<meta content="documentation system" name="description"/>
+<meta content="Dok" property="schema:name"/>
+<meta content="documentation system" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main page page--article">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">Dok</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">Content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">About</a>
+</li>
+</ul>
+</nav>
+</header>
+<!-- content -->
+<article class="article" id="other-tools">
+<h1 class="article__title">Other tools</h1>
+<p class="article__parent">
+        This article is part of:
+        <a href="project-management.html">project-management</a>.
+      </p>
+<section class="article__content ts" id="content">
+<h2 id="video-compression">Video compression</h2>
+<p><code>ffmpeg -i video.mp4 -b 1000000 compressed-video.mp4</code> or <code>ffmpeg -i video.mp4 -b 1000000 -t 10 compressed-video.mp4</code> where <code>-t 10</code> is the duration (10 sec.)</p>
+<h2 id="imagemagick-recipes">Imagemagick recipes</h2>
+<p><a class="external" href="https://imagemagick.org/index.php" target="_blank">Imagemagick</a> can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. Via the terminal.</p>
+<ul>
+<li>Rotate <code>mogrify -rotate 180 *.jpg</code></li>
+</ul>
+</section>
+<footer>
+<p>✎ <span>Created</span> 07/02/2020</p>
+<p>⁂ <span>Updated</span> 03/10/2020</p>
+</footer>
+</article>
+<!-- /content -->
+<footer class="footer">
+<p>Dok ☼ 2021 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
+</footer>
+</main>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
