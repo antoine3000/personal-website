@@ -10,8 +10,8 @@
 <meta content="documentation" property="schema:description"/>
 <link href="assets/main.min.css" rel="stylesheet"/>
 </head>
-<body>
-<main class="main page page--article">
+<body class="page page--article">
+<main class="main">
 <header class="header">
 <nav class="nav">
 <ul class="nav__list">
@@ -41,7 +41,7 @@
 <h3 class="toc__title--sub"><a href="incubator-v0-2.html#incubator-v0-2-cabinet">Cabinet ↓</a></h3>
 </section>
 <section class="article__content ts" id="content">
-<p>As my <a class="internal" href="incubator-v0-1.html">version 0.1</a> was not working as expected, I quickly moved on an another version, the 0.2. In this version, I redesigned the electronics and made a case for it, I made a small web interface to control and modify the temperature inside the incubator and finally did some tempeh!</p>
+<p>As my <a class="external" href="incubator-v0-1.html" target="_blank">version 0.1</a> was not working as expected, I quickly moved on an another version, the 0.2. In this version, I redesigned the electronics and made a case for it, I made a small web interface to control and modify the temperature inside the incubator and finally did some tempeh!</p>
 </section>
 <footer>
 <p>✎ <span>Created</span> 25/11/2020</p>
@@ -50,7 +50,7 @@
 <article class="article--sub" id="incubator-v0-2-electronics">
 <h1 class="article__title">Electronics <a href="incubator-v0-2-electronics.html">●</a></h1>
 <section class="article__content ts">
-<p>This is the continuation of <a class="internal" href="incubator-v0-1-electronics.html">the electronics of the v0.1</a>.</p>
+<p>This is the continuation of <a class="external" href="incubator-v0-1-electronics.html" target="_blank">the electronics of the v0.1</a>.</p>
 <p>In the previous version I had some problems with the ESP32 pins I was using. The one I had chosen for the heating pad could not be used as an output and the one I had chosen for the DHT11 sensor could not read values for any reason. I found out which pins to use after a session of testing all the pins and whether or not they could meet my needs.</p>
 <p>Also, during my tests, I realised that the DHT11 sensor doesn't really need 5V to work, even though I thought it would be better/safe to use it this way. This means that I can remove some components from the PCB (the level shifter that converted 3.3V to 5V), which simplified the PCB design.</p>
 <h1 id="schematics">Schematics</h1>
@@ -80,7 +80,7 @@
 <figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-electronics-result-03.jpg"><figcaption></figcaption></figure>
 <h1 id="files">Files</h1>
 <ul>
-<li>Design and fabrication files: <a class="btn internal" href="medias/incubator-v0-2-electronics-incubator-electronics-v0-2.zip">incubator-electronics-v0-2.zip</a></li>
+<li>Design and fabrication files: <a class="external" href="file:incubator-electronics-v0-2.zip" target="_blank">incubator-electronics-v0-2.zip</a></li>
 </ul>
 </section>
 <aside>
@@ -91,7 +91,7 @@
 <article class="article--sub" id="incubator-v0-2-case-for-electronics">
 <h1 class="article__title">A case for the electronics <a href="incubator-v0-2-case-for-electronics.html">●</a></h1>
 <section class="article__content ts">
-<p>Now that the <a class="internal" href="incubator-v0-2-electronics.html">electronics</a> is working, I need to protect it a little to avoid mishandling that could damage it. To do this, I will design a case which will then be printed in 3D.</p>
+<p>Now that the <a class="external" href="incubator-v0-2-electronics.html" target="_blank">electronics</a> is working, I need to protect it a little to avoid mishandling that could damage it. To do this, I will design a case which will then be printed in 3D.</p>
 <h1 id="design">Design</h1>
 <p>The main idea of this design is to have all the functions accessible while having a light reflection that communicates the state of the incubator (if it is heating up, or if it has reached the desired temperature, or if it is cooling down).</p>
 <p class="todo">To do: Add technical details</p>
@@ -168,6 +168,5 @@
 <p>antoine.studio ☼ 2022 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoine.studio/rss.xml">RSS Feed</a></p>
 </footer>
 </main>
-<script src="assets/js/scripts.js"></script>
 </body>
 </html>

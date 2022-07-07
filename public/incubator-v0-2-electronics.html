@@ -10,8 +10,8 @@
 <meta content="documentation" property="schema:description"/>
 <link href="assets/main.min.css" rel="stylesheet"/>
 </head>
-<body>
-<main class="main page page--article">
+<body class="page page--article">
+<main class="main">
 <header class="header">
 <nav class="nav">
 <ul class="nav__list">
@@ -38,7 +38,7 @@
         <a href="incubator-v0-2.html">incubator-v0-2</a>.
       </p>
 <section class="article__content ts" id="content">
-<p>This is the continuation of <a class="internal" href="incubator-v0-1-electronics.html">the electronics of the v0.1</a>.</p>
+<p>This is the continuation of <a class="external" href="incubator-v0-1-electronics.html" target="_blank">the electronics of the v0.1</a>.</p>
 <p>In the previous version I had some problems with the ESP32 pins I was using. The one I had chosen for the heating pad could not be used as an output and the one I had chosen for the DHT11 sensor could not read values for any reason. I found out which pins to use after a session of testing all the pins and whether or not they could meet my needs.</p>
 <p>Also, during my tests, I realised that the DHT11 sensor doesn't really need 5V to work, even though I thought it would be better/safe to use it this way. This means that I can remove some components from the PCB (the level shifter that converted 3.3V to 5V), which simplified the PCB design.</p>
 <h1 id="schematics">Schematics</h1>
@@ -68,7 +68,7 @@
 <figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-electronics-result-03.jpg"><figcaption></figcaption></figure>
 <h1 id="files">Files</h1>
 <ul>
-<li>Design and fabrication files: <a class="btn internal" href="medias/incubator-v0-2-electronics-incubator-electronics-v0-2.zip">incubator-electronics-v0-2.zip</a></li>
+<li>Design and fabrication files: <a class="external" href="file:incubator-electronics-v0-2.zip" target="_blank">incubator-electronics-v0-2.zip</a></li>
 </ul>
 </section>
 <footer>
@@ -81,6 +81,5 @@
 <p>antoine.studio ☼ 2022 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoine.studio/rss.xml">RSS Feed</a></p>
 </footer>
 </main>
-<script src="assets/js/scripts.js"></script>
 </body>
 </html>
