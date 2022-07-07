@@ -2,7 +2,7 @@
 *, *:before, *:after {
   box-sizing: border-box; }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, .index--featured .item__title, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,7 +26,7 @@ q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none; }
 
-a img {
+a img, .index--featured .item__title img {
   border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
@@ -105,13 +105,14 @@ textarea {
       padding-right: var(--size-xl); } }
 .ts em strong,
 .ts strong em, .ts strong, .admonition .admonition-title, .toc__title--sub, .article .index__title, .ts table th, .ts h3, .index:not(.index--featured) .index__link, .ts h2, .toc__title, .article--sub .article__title, .grid .item__title, .ts h1, .article__title, .intro p, .index--grid .index__title, .index__title, .ts .todo, .ts em, .ts blockquote p, body, .index--grid .index__list figcaption, .article figure figcaption, .article__toc, .index--grid .index__title span, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
+.index--list .index__update, .ts blockquote blockquote p, .index__item--sub, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-style: normal;
   font-weight: normal;
   line-height: 1.6; }
 
 body, .index--grid .index__list figcaption, .article figure figcaption, .article__toc, .index--grid .index__title span, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
+.index--list .index__update, .ts blockquote blockquote p, .index__item--sub,
+.index:not(.index--featured) .index__link, .index:not(.index--featured) .index__item--sub .index__link, .ts h4, .ts h5, .ts h6 {
   font-family: var(--font-body); }
 
 .ts .todo, .ts em, .ts blockquote p {
@@ -124,15 +125,15 @@ body, .index--grid .index__list figcaption, .article figure figcaption, .article
 .ts strong em {
   font-family: var(--font-body-bold-italic); }
 
-a {
+a, .index--featured .item__title {
   color: var(--base-color);
   text-decoration: none;
   background-color: var(--action-color); }
-  a:hover {
+  a:hover, .index--featured .item__title:hover {
     color: var(--base-color);
     text-decoration: underline;
     background-color: var(--action-color); }
-  a.external:after {
+  a.external:after, .index--featured .external.item__title:after {
     content: " ↗"; }
 
 .article__title, .intro p, .index--grid .index__title, .index__title {
@@ -147,13 +148,14 @@ a {
 .index:not(.index--featured) .index__link, .ts h2 {
   font-size: var(--size-lg); }
 
-.admonition .admonition-title, .toc__title--sub, .article .index__title, .ts table th, .ts h3 {
+.toc__title, .admonition .admonition-title, .toc__title--sub, .article .index__title, .ts table th, .ts h3 {
   font-size: var(--size-md); }
 
 .ts h4, .ts h5, .ts h6 {
   font-size: var(--size-md); }
 
-.index:not(.index--featured) .index__item--sub .index__link {
+.index__item--sub,
+.index:not(.index--featured) .index__link, .index:not(.index--featured) .index__item--sub .index__link {
   font-size: var(--size-md); }
 
 .index--grid .index__list figcaption, .article figure figcaption, .article__toc, .index--grid .index__title span, .index--list .index__tags,
@@ -362,7 +364,7 @@ img {
 
 .article__title {
   margin-bottom: var(--size-xs); }
-  .article__title a {
+  .article__title a, .article__title .index--featured .item__title, .index--featured .article__title .item__title {
     background-color: var(--body-color);
     color: var(--base-color);
     text-decoration: none; }
@@ -525,7 +527,7 @@ img {
   font-size: var(--size-sm);
   position: relative;
   z-index: 3; }
-  .topbar a {
+  .topbar a, .topbar .index--featured .item__title, .index--featured .topbar .item__title {
     border: none;
     padding: 0;
     background: transparent;
@@ -548,3 +550,128 @@ body {
   body ::selection {
     background-color: var(--action-color);
     color: var(--base-color); }
+
+.toc__title, .index__item--sub,
+.index:not(.index--featured) .index__link, .ts blockquote p, .ts em, .ts strong, .ts em strong,
+.ts strong em, .ts .todo, body {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  word-spacing: -0.15em; }
+
+a, .index--featured .item__title {
+  background: var(--special-color); }
+
+a, .index--featured .item__title {
+  color: var(--body-color);
+  padding: 0.2em;
+  text-decoration: none;
+  border-radius: var(--size-xxs); }
+  a:hover, .index--featured .item__title:hover {
+    background-color: var(--body-color);
+    text-decoration: none; }
+
+.tags__link,
+.tag__link {
+  background: none;
+  color: var(--base-color);
+  border: var(--border-sm) solid var(--base-color);
+  border-radius: var(--size-xs);
+  padding: 0 var(--size-xxs); }
+
+.article__title a, .article__title .index--featured .item__title, .index--featured .article__title .item__title {
+  background: none; }
+
+.index--featured .index__link {
+  background: none; }
+
+.intro {
+  max-width: 100%; }
+
+.index--list .index__item {
+  margin-bottom: var(--size-xs); }
+
+.index--tags .index__item:not(:last-child) {
+  margin-bottom: var(--size-sm); }
+
+.article__toc {
+  display: inline-block;
+  border: var(--border-sm) dotted var(--base-color);
+  padding: var(--size-md);
+  border-radius: var(--size-md); }
+
+.toc__title {
+  margin-bottom: var(--size-md); }
+
+.article__toc .toc__title--sub {
+  font-size: var(--size-sm);
+  margin-top: var(--size-lg);
+  margin-bottom: var(--size-xs); }
+
+.article--sub {
+  margin-top: var(--size-xl);
+  padding-top: var(--size-xl); }
+
+.ts .btn {
+  color: var(--body-color); }
+  .ts .btn:before {
+    content: "→ "; }
+
+.ts hr {
+  margin: var(--size-xxl) 0;
+  border: none;
+  height: var(--border-sm);
+  background-color: var(--base-color); }
+
+.ts ul {
+  list-style: none;
+  padding: 0; }
+  .ts ul li {
+    padding-left: var(--size-md);
+    position: relative; }
+    .ts ul li:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      top: 0.1em; }
+  .ts ul ul {
+    margin-bottom: 0; }
+
+.ts figure.lg img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 90vh; }
+
+.player {
+  margin-bottom: var(--size-md); }
+
+:root {
+  --body-color: #cfcfcf;
+  --action-color: var(--base-color);
+  --special-color: var(--base-color);
+  --special-color-1: rgb(113, 52, 255);
+  --special-color-2: rgb(113, 52, 255);
+  --content-max-width: 720px; }
+
+html {
+  font-size: 16px; }
+  @media (max-width: 767px) {
+    html {
+      font-size: 13px; } }
+body ::-moz-selection {
+  background-color: var(--action-color);
+  color: var(--body-color); }
+
+body ::selection {
+  background-color: var(--action-color);
+  color: var(--body-color); }
+
+.header {
+  margin-bottom: var(--size-md); }
+
+.index__title {
+  margin-bottom: var(--size-lg); }
+
+.article__content pre {
+  margin-bottom: var(--size-sm); }

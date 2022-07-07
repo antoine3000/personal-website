@@ -1,0 +1,9 @@
+// Index
+
+.index--list .index__item {
+  margin-bottom: var(--size-xs);
+}
+
+.index--tags .index__item:not(:last-child) {
+  margin-bottom: var(--size-sm);
+}

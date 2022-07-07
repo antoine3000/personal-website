@@ -1,0 +1,49 @@
+// Typography
+
+%font-base {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  word-spacing: -0.15em;
+}
+
+%background-special {
+  background: var(--special-color);
+  // background: radial-gradient(circle,var(--special-color-1) 0%,var(--special-color-2) 100%);
+  // background: linear-gradient(90deg,var(--special-color-1) 0%, var(--special-color-2) 100%); 
+}
+
+
+%ts-link {
+  color: var(--body-color);
+  padding: 0.2em;
+  text-decoration: none;
+  @extend %background-special;
+  border-radius: var(--size-xxs);
+  &:hover {
+    background-color: var(--body-color);
+    text-decoration: none;
+  }
+}
+
+.tags__link,
+.tag__link {
+  background: none;
+  color: var(--base-color);
+  border: var(--border-sm) solid var(--base-color);
+  border-radius: var(--size-xs);
+  padding: 0 var(--size-xxs);
+}
+
+.article__title a {
+  background: none;
+}
+
+.index--featured {
+  .index__link {
+    background: none;
+  }
+  .item__title {
+    @extend a;
+  }
+}
