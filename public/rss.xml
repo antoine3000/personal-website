@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>documentation</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 07 Jul 2022 15:28:51 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;html&gt;&lt;body&gt;&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>antoine.studio</title><link>https://antoine.studio</link><description>documentation</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><language>en</language><lastBuildDate>Thu, 07 Jul 2022 15:44:13 +0000</lastBuildDate><item><title>Ilford XP2 - 4449</title><link>https://antoine.studio/ilford-xp2-4449.html</link><description>&lt;html&gt;&lt;body&gt;&lt;p&gt;These photos were taken between November 2019 and February 2020, in Amsterdam, Brussels, Valencia and Barcelona. On a Ilford XP2 film.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="large:4449-01.jpg"/&gt;
 &lt;img alt="" src="large:4449-02.jpg"/&gt;
 &lt;img alt="" src="large:4449-03.jpg"/&gt;
@@ -695,11 +695,11 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;h2 id="air-pump"&gt;Air pump&lt;/h2&gt;
 &lt;p&gt;The &lt;a class="external" href="https://www.sparkfun.com/products/10398"&gt;air pump&lt;/a&gt; operates at 12V and has sufficient suction for my project. The only drawback is that it is very noisy. It will not produce the complete meditative experience I am looking for, but it will work for this first prototype. This pump was available at the lab.&lt;/p&gt;
 &lt;h2 id="solenoids"&gt;Solenoids&lt;/h2&gt;
-&lt;p&gt;The four CJV23 solenoids (&lt;a class="internal" href="file:CJV23.pdf"&gt;datasheet&lt;/a&gt;) are the same as those used in the Programmable Air project. I took it as a reference because it's not so easy to find valves for air circuits (and not for water). I found them on &lt;a class="external" href="https://www.ebay.es/itm/324162624034"&gt;ebay&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The four CJV23 solenoids (&lt;a class="btn internal" href="medias/green-observatory-output-CJV23.pdf"&gt;datasheet&lt;/a&gt;) are the same as those used in the Programmable Air project. I took it as a reference because it's not so easy to find valves for air circuits (and not for water). I found them on &lt;a class="external" href="https://www.ebay.es/itm/324162624034"&gt;ebay&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="buck-boost"&gt;Buck-boost&lt;/h2&gt;
 &lt;p&gt;I use a buck-boost from &lt;a class="external" href="https://www.adafruit.com/product/2190"&gt;Adrafuit&lt;/a&gt; (which was available at the lab) to convert 12V (input) to 5V (output). this alhighs me to power the high voltage circuit from this high voltage board.&lt;/p&gt;
 &lt;h1 id="design"&gt;Design&lt;/h1&gt;
-&lt;p&gt;I design electronics boards with &lt;a class="external" href="https://kicad-pcb.org/"&gt;KiCad&lt;/a&gt;, a cross platform and open source electronics design ...</description><pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the inflatable part</title><link>https://antoine.studio/green-observatory-inflatable.html</link><description>&lt;html&gt;&lt;body&gt;&lt;p&gt;An important part of my final project is the inflatable part, which will help us understand the electrical activity of plants. This part should produce organic movements that react to a flow of air.&lt;/p&gt;
+&lt;p&gt;I design electronics boards with &lt;a class="external" href="https://kicad-pcb.org/"&gt;KiCad&lt;/a&gt;, a cross platform and ...</description><pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate></item><item><title>Making of the inflatable part</title><link>https://antoine.studio/green-observatory-inflatable.html</link><description>&lt;html&gt;&lt;body&gt;&lt;p&gt;An important part of my final project is the inflatable part, which will help us understand the electrical activity of plants. This part should produce organic movements that react to a flow of air.&lt;/p&gt;
 &lt;p&gt;So I have to produce a silicone part that has an air pocket inside that could be inflated and deflated by pushing and pulling a flow of air inside through two pipes (in and out).&lt;/p&gt;
 &lt;h1 id="strategy"&gt;Strategy&lt;/h1&gt;
 &lt;p&gt;The strategy that Eduardo Chamorro (one of my instructors) and I came up with is to build a mold using a piece of laser-cut acrylic to cast a first layer of silicon and then redo another layer while inserting another piece of acrylic that will allow us to preserve an air pocket inside the cast silicon piece.&lt;/p&gt;
@@ -801,12 +801,12 @@ For this &lt;em&gt;Molding &amp;amp; Casting&lt;/em&gt; week, I'm going to mold 
 &lt;img alt="" src="solenoid-holder-03.jpg"/&gt;&lt;/p&gt;
 &lt;h1 id="files"&gt;Files&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Solenoid holder (Freecad design file): &lt;a class="internal" href="file:system-solenoid.FCStd"&gt;system-solenoid.FCStd&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Solenoid holder (Fabrication file): &lt;a class="internal" href="file:solenoid-holder-2.stl"&gt;solenoid-holder-2.stl&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Mounting plate (Freecad design file): &lt;a class="internal" href="file:mounting-plate.FCStd"&gt;mounting-plate.FCStd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Solenoid holder (Freecad design file): &lt;a class="btn internal" href="medias/machine-design-making-the-field-system-solenoid.FCStd"&gt;system-solenoid.FCStd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Solenoid holder (Fabrication file): &lt;a class="btn internal" href="medias/machine-design-making-the-field-solenoid-holder-2.stl"&gt;solenoid-holder-2.stl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mounting plate (Freecad design file): &lt;a class="btn internal" href="medias/machine-design-making-the-field-mounting-plate.FCStd"&gt;mounting-plate.FCStd&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;ul&gt;
-&lt;li&gt;Mounting plate (Fabrication file): &lt;a class="internal" href="file:mounting-plate.dxf"&gt;mounting-plate.dxf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mounting plate (Fabrication file): &lt;a class="btn internal" href="medias/machine-design-making-the-field-mounting-plate.dxf"&gt;mounting-plate.dxf&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;...</description><pubDate>Mon, 09 Nov 2020 00:00:00 +0200</pubDate></item><item><title>Interface example</title><link>https://antoine.studio/incubator-v0-1-interface-example.html</link><description>&lt;html&gt;&lt;body&gt;&lt;p&gt;To make sure I understand how a web interface is made via an ESP32, I started with a very basic example. The only thing this minimal example will do is to light on and off the RGB LED connected to the Barduino (ESP32) through the incubator shield I designed via a web interface accessible from any browser (desktop and mobile).&lt;/p&gt;
