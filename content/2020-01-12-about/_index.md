@@ -6,8 +6,8 @@ last_update: 2020-09-04
 
 Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).
 
-!!! notes "It's time to update my site"
-    To see what I'm working on, visit my project website [Domingo Club](https://domingoclub.com)
+!!! notes "What's in the making?"
+    Want to know what I'm doing now? Visit my [now](now.html) page.
 
 ![antoine-chill](antoine-chill.jpg)
 
