@@ -1,5 +1,6 @@
 ---
 title: Final project: research
+open: True
 ---
 
 # Introduction

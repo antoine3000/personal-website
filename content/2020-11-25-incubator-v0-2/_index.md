@@ -1,5 +1,6 @@
 ---
 title: Incubator v0.2
+open: True
 featured_image: personal-setup.jpg:flux
 ---
 

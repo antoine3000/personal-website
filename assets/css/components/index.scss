@@ -7,3 +7,14 @@
 .index--tags .index__item:not(:last-child) {
   margin-bottom: var(--size-sm);
 }
+
+.index__item {
+  margin-bottom: var(--size-xl);
+}
+
+.index__list--sub {
+  margin-top: var(--size-xxs);
+  .index__item {
+    margin-bottom: var(--size-xxs);
+  }
+}
