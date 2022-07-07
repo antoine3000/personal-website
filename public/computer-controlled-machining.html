@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - documentation</title>
+<meta content="documentation" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="documentation" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main page page--article">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<!-- content -->
+<article class="article" id="computer-controlled-machining">
+<h1 class="article__title">Computer-controlled machining</h1>
+<p class="article__tags">Tags:
+        
+        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+</p>
+<section class="article__toc">
+<h3 class="toc__title--sub"><a href="computer-controlled-machining.html#computer-controlled-machining-cnc-machine">CNC machine ↓</a></h3>
+<h3 class="toc__title--sub"><a href="computer-controlled-machining.html#computer-controlled-machining-fab-stool-bench-table">Fab stool/bench/table ↓</a></h3>
+</section>
+<section class="article__content ts" id="content">
+</section>
+<footer>
+<p>✎ <span>Created</span> 11/03/2020</p>
+<p>⁂ <span>Updated</span> 11/03/2020</p>
+</footer>
+<article class="article--sub" id="computer-controlled-machining-cnc-machine">
+<h1 class="article__title">CNC machine <a href="computer-controlled-machining-cnc-machine.html">●</a></h1>
+<section class="article__content ts">
+<h1 id="introduction">Introduction</h1>
+<p>For this week's assignement we have to characterise the CNC machine. This was done when we had the opportunity to return to the lab after the lockdown situation due to the COVID-19 pandemic.</p>
+<p>I had a chance to team up with my classmates <a class="external" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/" target="_blank">Tue Ngo</a>, <a class="external" href="https://fabacademy.org/2020/labs/barcelona/students/arman-najari/" target="_blank">Arman Naraji</a>, <a class="external" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/" target="_blank">David Prieto</a> and <a class="external" href="https://fabacademy.org/2020/labs/barcelona/students/lynn-dika/" target="_blank">Lynn Dika</a> for this group assignment.</p>
+<p>On this page, I will highlight the key point of the process. Tue has detailed everything on her page, please feel free to go there for the full documentation.</p>
+<p><a class="btn external" href="http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-07-computer-controlled-machining.html" target="_blank">Full documentation</a></p>
+<hr/>
+<h1 id="personal-notes">Personal notes</h1>
+<h2 id="software">Software</h2>
+<p>Unfortunately, Fab Lab Barcelona uses <a class="external" href="https://mecsoft.com/rhinocam/" target="_blank">RhinoCAM</a> (~1500€), a plug-in for <a class="external" href="https://www.rhino3d.com/" target="_blank">Rhino3D</a> (995€), to perform this task. Paying ~2495€ for a propriatary software that students can't get unless they crack it is a very bad idea for me, especially in the context of Fab Labs. But Fab Lab Barcelona made this choice and configured RhinoCAM with all the necessary parameters to work with the <a class="external" href="https://www.cnc-step.com/milling-machine/" target="_blank">RaptorX-SL</a>, the big CNC.</p>
+<p>I hope that open-source solutions will evolve robustly in the near future to counter this proprietary monopoly.</p>
+<figure class="lg"><img alt="RhinoCAM" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-cam-1.png"><figcaption>RhinoCAM</figcaption></figure>
+<figure class="lg"><img alt="RhinoCAM" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-cam-2.png"><figcaption>RhinoCAM</figcaption></figure>
+<h2 id="g-code">G-code</h2>
+<p>To mill something with the CNC, we first have to screw a wooden board onto the machine bed to make sure it won't move during the process. But as we don't want to mill on a screw, which can cause a fire, we first have to place the screws on our drawing and generate a G-code (<em>Machining Operation &gt; Engraving</em>) just for that. Then another g-code (<em>Machining Operation &gt; 2-axis Profiling</em>) has to be generated with our design only.</p>
+<h2 id="what-we-need-to-know">What we need to know</h2>
+<ul>
+<li>the <strong>thickness of the material</strong> we are going to mill, and <strong>its chip load</strong> value (the thickness of material removed by each cutting edge during a cut)</li>
+<li>the <strong>diameter of the endmill</strong> and the <strong>number of flutes</strong> it has (the sharp slots that corkscrew upwards along the length of a milling bit)</li>
+<li>the spindle speed at which the spindle of the machine rotates</li>
+</ul>
+<h2 id="tools-feed-and-speed">Tool's feed and speed</h2>
+<p><code>Feed rate = N x CPT x RPM</code> is the formula used to calculate the tool's feed and speed. Where <strong>feed rate</strong> is the speed at which the cutter engages the part,  <strong>N</strong> as the number of flutes, <strong>CPT</strong> as the chip load and <strong>RPM</strong> as the spindle speed at which the spindle of the machine rotates.</p>
+<h2 id="machining-with-the-raptorx-sl">Machining with the RaptorX-SL</h2>
+<p>We used the <a class="external" href="https://www.cnc-step.com/raptorx-sl-xl-gantry-cnc-router-machine-3200s20-with-3200-x-2010mm-traverse-path/" target="_blank">Raptor X-SL 3200/S20</a> machine and its software <a class="external" href="https://www.cnc-step.com/cnc-software/kinetic-nc-cnc-control-software/" target="_blank">KinetiC-NC</a> to do the test. The detailed specs of the machine:</p>
+<ul>
+<li>Working area: <code>3,200 x 2,010 x 300mm</code></li>
+<li>Clamping area: <code>X -3,500mm x Y -2,200mm</code></li>
+<li>Positioning speed X+Y/Z: <code>maximum 40,000mm/min</code></li>
+<li>Working speed: <code>maximum 20,000mm/min</code></li>
+<li>Step width X: <code>0.0213mm</code></li>
+<li>Step width Y+Z: <code>0.0113mm</code></li>
+</ul>
+<figure class="lg"><img alt="" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-1.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-2.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-3.jpg"><figcaption></figcaption></figure>
+<figure class="lg"><img alt="" loading="lazy" src="medias/computer-controlled-machining-cnc-machine-test-4.jpg"><figcaption></figcaption></figure>
+<h1 id="conclusion">Conclusion</h1>
+<p>The Raptor CNC machine is impressive in power and size. It can carry out large projects, but it can also be dangerous, which is why it is important to observe the safety rules:</p>
+<ul>
+<li>Wear safety glasses</li>
+<li>know where the emergency button is located</li>
+<li>switch on the ventilation</li>
+</ul>
+<p>It is also very important to know and understand all the data we have to deal with. Running the machine too fast can damage the material and the machine itself, too slow can produce too much heat and start a fire, etc. With this giant machine you don't play with rules and mathematics.</p>
+<p>Making the toolpath (g-code) is the big part of working with the CNC, and because of the Rhino software that I don't have, because I use Linux and open source software, I'm not very confident in the process. I'm looking forward to doing my personal project to have more time to absorb the knowledge we need to know. See you at the next step!</p>
+</section>
+<aside>
+<p>✎ <span>Created</span> 01/10/2020</p>
+<p>⁂ <span>Updated</span> 01/10/2020</p>
+</aside>
+</article>
+<article class="article--sub" id="computer-controlled-machining-fab-stool-bench-table">
+<h1 class="article__title">Fab stool/bench/table <a href="computer-controlled-machining-fab-stool-bench-table.html">●</a></h1>
+<section class="article__content ts">
+<p>I wanted to have a stool/bench/table for my apartment, a kind of furniture that can be different things because of its dimensions. So I designed and fabricated it using the large CNC at Fab Lab Barcelona.</p>
+<p>I designed it with parametric values. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.</p>
+<h1 id="design">Design</h1>
+<p>I first designed this project on paper and then in <a class="external" href="https://www.freecadweb.org/" target="_blank">Freecad</a>, my favorite open-source software for 3D modeling.</p>
+<p>The stool/bench/table consists of a seat, two legs and a stretcher.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-1.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="front view" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-4.png"><figcaption>front view</figcaption></figure>
+<figure class="md"><img alt="top view" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-view-5.png"><figcaption>top view</figcaption></figure>
+<h2 id="parametric-values">Parametric values</h2>
+<p>I used parametric values in order to easily modify values such as the lengths of the seat, the height of the legs, the thickness of the material, the endmill diameter I will use, the length of the slots, etc.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-parametric-values.png"><figcaption></figcaption></figure>
+<p>Once the document is well organised and the values in the part design workbench call up values from the datasheet, changing the values automatically changes the rest. This allows me to design without knowing everything in advance, such as the diameter of the milling cutter that will be used to mill the project, and above all it allows the design to be adapted quickly and almost frictionlessly to new constraints.</p>
+<h2 id="preparing-for-production">Preparing for production</h2>
+<h3 id="tolerance">Tolerance</h3>
+<p>It is strongly recommended to take a tolerance value into account when working with a CNC machine. This is because the machine will not produce a perfect result and if the cuts are too tight, there is a good chance that it will be almost impossible to put the project together.</p>
+<figure class="md"><img alt="Tolerance detail" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-tolerance.png"><figcaption>Tolerance detail</figcaption></figure>
+<p>In this case I used a tolerance value of <code>0.2 mm</code>. This means that there is an extra <code>0.1 mm</code> on each side of the cut to make sure that the parts fit together.</p>
+<p>Update: the tolerance value I used wasn't enough, I had to sand the mortises in order to join the different elements together.</p>
+<h3 id="dogbones">Dogbones</h3>
+<p>Right angles are not accessible by the endmills, which will produce an undesirable result.</p>
+<p>To avoid this, it is common practice to create dog bone shapes by adding holes the size of the endmill in the right angles. The space left by the cut will then correspond to the piece that is supposed to fit into it.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-dogbones1.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-dogbones2.png"><figcaption></figcaption></figure>
+<h3 id="export">Export</h3>
+<p>When the different parts are well designed, take into account the tolerance of the CNC and have dogbones shapes to ensure that the actual measurements will be as expected, export all parts in a technical drawing sheet at the correct scale (1:1). This sheet should be exported as a <code>.dxf</code> file and then imported into RhinoCAM.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-techdraw.png"><figcaption></figcaption></figure>
+<h1 id="toolpaths">Toolpaths</h1>
+<h2 id="file-import">File import</h2>
+<ul>
+<li>Import the <code>.dxf</code> file into Rhino</li>
+<li><code>Join</code> the different paths together and <code>Group</code> them to be sure that no lines will float alone</li>
+</ul>
+<h2 id="box-stock">Box stock</h2>
+<ul>
+<li>Create a rectangle the size of your material <code>2,400 mm x 1,250 mm</code></li>
+<li><code>Stock &gt; Box stock</code> and select the rectangle</li>
+<li>Select <code>Height</code></li>
+<li>Corner coordinates <code>0, 0, 0</code></li>
+<li>Dimensions <code>2,400 x 1,250 x 15</code></li>
+</ul>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-rhino-overview.png"><figcaption></figcaption></figure>
+<h2 id="screw-marks">Screw marks</h2>
+<ul>
+<li>Copy the material rectangle and offset it by <code>20mm</code></li>
+<li>Create <code>Points</code> along the offset line to fix the material</li>
+<li>Add more <code>Points</code> around the critical part that could move during the process. If it is needed to add a screw inside a pocket, make sure to place two of them to avoid any rotational movement.</li>
+</ul>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-engraving.png"><figcaption></figcaption></figure>
+<h2 id="tool">Tool</h2>
+<ul>
+<li>Create a new <code>Tool</code></li>
+<li>Flat mill downcut</li>
+<li>Number of flutes: <code>1</code></li>
+<li>Tool diameter: <code>6 mm</code></li>
+<li>Tool length: <code>35 mm</code></li>
+<li>Shoulder length: <code>32 mm</code></li>
+<li>Flute length: <code>30 mm</code></li>
+<li>Feeds &amp; Speeds<ul>
+<li>Speed: <code>18000 RPM</code> (the machine can operate between 18000 and 24000 RPM, but the minimum is enough)</li>
+<li>Cut speed: <code>5500</code></li>
+<li>Plunge, approach , engage, retract, departure: <code>2500</code> (cut speed/2)</li>
+<li>Transfer: <code>Use rapid</code> (and set 10000 for RhinoCAM simulation)</li>
+</ul>
+</li>
+<li><code>Save</code> the new tool</li>
+</ul>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-tool.png"><figcaption></figcaption></figure>
+<p>To calculate the <code>Cut speed</code> value, check the chipload value of the material (for plywood, using a 6mm endmill, range is <code>.011″-.013″</code>, according to this <a class="external" href="https://gdptooling.com/chipload-calc/#" target="_blank">calculator</a>). Then RPM * number of flutes * minimum value * 25.4 (in to cm) = minimum cut speed. Then do the same for the maximum value. Finally, use a value in the middle to ensure the happiness of the machine.</p>
+<h2 id="engraving-pocketing-profiling">Engraving, pocketing, profiling</h2>
+<p>Do each step on a different layer.</p>
+<ul>
+<li>Control geometry: select the appropriate zones and <code>generate</code></li>
+<li>Tool: select the previoulsy created tool</li>
+<li>Feeds and speeds: Load from tool</li>
+<li>Clearance Plane: Stock Max Z + Dist: <code>20 mm</code> for the screws (this will prevent the tool from scratching the material, if it's bent, during its movements) , then <code>10 mm</code> for the rest</li>
+<li>Cut Parameters:</li>
+<li>Tolerance: <code>0.03 mm</code> for the screws then <code>0.01 mm</code> for the rest</li>
+<li>Stock: <code>0</code></li>
+<li>Cut direction: <code>Climb (Down cut)</code></li>
+<li>Start Point: <code>Inside</code> or <code>Outside</code> depending on the design</li>
+<li>Stepover Distance: <code>25 %</code></li>
+<li>Cut levels</li>
+<li>Total Cut Depth: <code>3</code> for the screws, then <code>15.5</code> (material thickness + margin) for the rest</li>
+<li>Rough Depth Cut: <code>3</code> (3 mm on each layer, we don't want to force the tool)</li>
+<li>Entry/Exit: <code>None</code> and <code>None</code>, this is not needed for wood'()</li>
+<li>Advanced Cut Parameters (for the profiling)</li>
+<li>Bridges: <code>Rectangular</code></li>
+<li>Bidge Height: <code>4</code></li>
+<li>Bidge Length: <code>4</code></li>
+<li>Number of brigdes: Depends on the design</li>
+<li>Sorting: <code>Minimum Distance Sort</code></li>
+<li><code>Generate</code></li>
+</ul>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-pocketing.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-in-profiling.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-out-profiling.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-perspective.png"><figcaption></figcaption></figure>
+<h2 id="export-to-g-code">Export to G-code</h2>
+<p>Two files must be exported. The first one contains the screw data, which we will run first. Then all the other operations (pocketing, inner profiling, outer profiling) on the second file, which we will launch once the material is screwed to the machine bed.</p>
+<ul>
+<li>Right click on a operation &gt; <code>Post</code></li>
+<li>File name: something like <code>01-screws-6mm</code> or <code>02-6mm</code></li>
+<li>Save as type: <code>*.nc</code></li>
+<li>Current post: <code>CNC_STEP_BCN</code> (which contains all the information about the specific machine I will be using)</li>
+</ul>
+<h1 id="fabrication">Fabrication</h1>
+<ol>
+<li>Mount the material on the machine bed</li>
+<li>Mount the desired endmill and tighten it properly</li>
+<li>In the machine software (KinetiC-NC) go to Jog/Setup, move to zero position</li>
+<li>Set the Z position using the mechanical button: put the large button under the endmill and set the Z, the sotftware will know what the correct Z value is</li>
+<li>Run the first file to obtain the srew positions on the material</li>
+<li>Screw the material to the machine bed</li>
+<li>Re-set the Z because the material should be lower than before now that it is properly fixed</li>
+<li>Run the second file containing all the other instructions</li>
+<li>Cut the brigdes using an hammer and a chisel</li>
+<li>Unscrew the screws</li>
+<li>Sand the egdes of the pieces to obtain a nice result</li>
+</ol>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-1.jpg"><figcaption></figcaption></figure>
+<video controls="" preload="auto"><source src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-web.mp4" type="video/mp4"/></video>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-3.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-cnc-milling-4.jpg"><figcaption></figcaption></figure>
+<h1 id="result">Result</h1>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-1.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-2.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/computer-controlled-machining-fab-stool-bench-table-stool-3.jpg"><figcaption></figcaption></figure>
+<h1 id="conclusion">Conclusion</h1>
+<p>It's really nice to design something knowing how it will be made afterwards. Designing with constraints, understanding the material and taking into account all the little details that can make a difference. That's part of the reason I'm doing this Fab Academy. CNC is a wonderful machine that can produce all kinds of results, and I'm looking forward to discovering them all.</p>
+<p>At first it was intimidating. The machine is powerful and can be harmful if not used properly and there is a wide range of settings to know and understand to produce the right instructions for the machine (G-code). But once all this is demystified, all that remains is fun and new possibilities.</p>
+<h1 id="files">Files</h1>
+<ul>
+<li>Stool v1, Freecad design file -&gt; <a class="btn internal" href="medias/computer-controlled-machining-fab-stool-bench-table-a-stool.FCStd">a-stool.FCStd</a></li>
+<li>Stool v1, Freecad fabrication file -&gt; <a class="btn internal" href="medias/computer-controlled-machining-fab-stool-bench-table-a-stool-fab.FCStd">a-stool-fab.FCStd</a></li>
+<li>Stool v1, DXF export -&gt; <a class="btn internal" href="medias/computer-controlled-machining-fab-stool-bench-table-a-stool-fab.dxf">a-stool-fab.dxf</a></li>
+<li>Stool v1, RhinoCAM file -&gt; <a class="btn internal" href="medias/computer-controlled-machining-fab-stool-bench-table-stool-v1-a-stool-fab.3dm">stool-v1-a-stool-fab.3dm</a></li>
+<li>Stool v1, g-code step 1 -&gt; <a class="internal" href="stool-v1-01-screws-6mm.nc">stool-v1-01-screws-6mm.nc</a></li>
+<li>Stool v1, g-code step 2 -&gt; <a class="internal" href="stool-v1-02-6mm.nc">stool-v1-02-6mm.nc</a></li>
+</ul>
+</section>
+<aside>
+<p>✎ <span>Created</span> 02/10/2020</p>
+<p>⁂ <span>Updated</span> 06/10/2020</p>
+</aside>
+</article>
+</article>
+<!-- /content -->
+<footer class="footer">
+<p>antoine.studio ☼ 2022 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoine.studio/rss.xml">RSS Feed</a></p>
+</footer>
+</main>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

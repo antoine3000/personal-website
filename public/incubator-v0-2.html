@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoine.studio - documentation</title>
+<meta content="documentation" name="description"/>
+<meta content="antoine.studio" property="schema:name"/>
+<meta content="documentation" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="main page page--article">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoine.studio</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<!-- content -->
+<article class="article" id="incubator-v0-2">
+<h1 class="article__title">Incubator v0.2</h1>
+<section class="article__toc">
+<h3 class="toc__title--sub"><a href="incubator-v0-2.html#incubator-v0-2-electronics">Electronics ↓</a></h3>
+<h3 class="toc__title--sub"><a href="incubator-v0-2.html#incubator-v0-2-case-for-electronics">A case for the electronics ↓</a></h3>
+<h3 class="toc__title--sub"><a href="incubator-v0-2.html#incubator-v0-2-web-interface">Web interface ↓</a></h3>
+<h3 class="toc__title--sub"><a href="incubator-v0-2.html#incubator-v0-2-first-tempeh">Our first tempeh ↓</a></h3>
+<h3 class="toc__title--sub"><a href="incubator-v0-2.html#incubator-v0-2-cabinet">Cabinet ↓</a></h3>
+</section>
+<section class="article__content ts" id="content">
+<p>As my <a class="internal" href="incubator-v0-1.html">version 0.1</a> was not working as expected, I quickly moved on an another version, the 0.2. In this version, I redesigned the electronics and made a case for it, I made a small web interface to control and modify the temperature inside the incubator and finally did some tempeh!</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 25/11/2020</p>
+<p>⁂ <span>Updated</span> 25/11/2020</p>
+</footer>
+<article class="article--sub" id="incubator-v0-2-electronics">
+<h1 class="article__title">Electronics <a href="incubator-v0-2-electronics.html">●</a></h1>
+<section class="article__content ts">
+<p>This is the continuation of <a class="internal" href="incubator-v0-1-electronics.html">the electronics of the v0.1</a>.</p>
+<p>In the previous version I had some problems with the ESP32 pins I was using. The one I had chosen for the heating pad could not be used as an output and the one I had chosen for the DHT11 sensor could not read values for any reason. I found out which pins to use after a session of testing all the pins and whether or not they could meet my needs.</p>
+<p>Also, during my tests, I realised that the DHT11 sensor doesn't really need 5V to work, even though I thought it would be better/safe to use it this way. This means that I can remove some components from the PCB (the level shifter that converted 3.3V to 5V), which simplified the PCB design.</p>
+<h1 id="schematics">Schematics</h1>
+<figure class="lg"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-schematics.svg"><figcaption></figcaption></figure>
+<h1 id="pcb-design">PCB design</h1>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-3d.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb.svg"><figcaption></figcaption></figure>
+<h2 id="robustness-and-therefore-longevity">Robustness and therefore longevity</h2>
+<p>This time, I decided to solder some components on the back of the PCB, as this will be easier to solder and will ensure the robustness and therefore the longevity of the design.</p>
+<p>The components that will be soldered on the back are the Barduino (header), the barrel jack, the terminals (heating pad, fan, DHT11 sensor). To ensure the circuit connectivity, I have inverted the footprint of the Barduino and the barrel jack (I don't have to do this for the terminals as I will simply invert the cables).</p>
+<h1 id="fabrication-and-soldering">Fabrication and soldering</h1>
+<p>I fabricated this board at the Fab Lab Barcelona using a Roland SRM-20 milling machine. Then I took it home to solder it quietly with a good cup of tea.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-process-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-process-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-process-03.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-process-06.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-process-07.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-process-04.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-process-05.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-pcb-process-08.jpg"><figcaption></figcaption></figure>
+<h2 id="little-mistake">Little mistake</h2>
+<p>While making the schematics, I called the 3.3 volt line "3V3" and "3.3V", which produced a disconnected line. I had to solder a resistor tab between the 3.3V and one of the DHT11 sensor pads to make it work. I need to correct this in the next version.</p>
+<h1 id="result">Result</h1>
+<p>The prototype now works perfectly. The DHT11 sensor measures the temperature and humidity inside the box, the heating pad heats to maintain the temperature at the desired value and the fan circulates the air to distribute the heat properly.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-electronics-result-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-electronics-result-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-electronics-electronics-result-03.jpg"><figcaption></figcaption></figure>
+<h1 id="files">Files</h1>
+<ul>
+<li>Design and fabrication files: <a class="btn internal" href="medias/incubator-v0-2-electronics-incubator-electronics-v0-2.zip">incubator-electronics-v0-2.zip</a></li>
+</ul>
+</section>
+<aside>
+<p>✎ <span>Created</span> 22/11/2020</p>
+<p>⁂ <span>Updated</span> 22/11/2020</p>
+</aside>
+</article>
+<article class="article--sub" id="incubator-v0-2-case-for-electronics">
+<h1 class="article__title">A case for the electronics <a href="incubator-v0-2-case-for-electronics.html">●</a></h1>
+<section class="article__content ts">
+<p>Now that the <a class="internal" href="incubator-v0-2-electronics.html">electronics</a> is working, I need to protect it a little to avoid mishandling that could damage it. To do this, I will design a case which will then be printed in 3D.</p>
+<h1 id="design">Design</h1>
+<p>The main idea of this design is to have all the functions accessible while having a light reflection that communicates the state of the incubator (if it is heating up, or if it has reached the desired temperature, or if it is cooling down).</p>
+<p class="todo">To do: Add technical details</p>
+<h2 id="what-must-remain-accessible">What must remain accessible</h2>
+<ul>
+<li>the USB port</li>
+<li>Barrel jack</li>
+<li>Reset button</li>
+<li>Programmer switch</li>
+<li>Terminals (3)</li>
+<li>ESP32 antenna</li>
+</ul>
+<h2 id="a-way-to-fix-it">A way to fix it</h2>
+<p>Also, we need to find a way to fix the electronics in the case and then the case in the incubator, for this I will use M3 bolts and nuts. I downloaded a <a class="external" href="https://grabcad.com/library/m3-hex-nut-1" target="_blank">3D model</a> of the M3 nut that I incorporated into my design.</p>
+<h2 id="from-kicad-to-freecad">From KiCAD to FreeCAD</h2>
+<p>Both <a class="external" href="https://www.kicad.org/" target="_blank">KiCAD</a> (Electronics design) and <a class="external" href="https://www.freecadweb.org/" target="_blank">FreeCAD</a> (2D and 3D parametric modeler) are open-source and work hand in hand in order to facilitate the use of one after the other. FreeCAD's <a class="external" href="https://wiki.freecadweb.org/KicadStepUp_Workbench" target="_blank">KicadStepUp workbench</a> allows to import a 3D model from a PCB designed in KiCAD to start designing from it.</p>
+<h2 id="views">Views</h2>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-01.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-02.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-03.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-04.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-05.png"><figcaption></figcaption></figure>
+<h1 id="fabrication">Fabrication</h1>
+<p>I printed this project at home using our new Mini Prusa 3D printer. I'm always amazed at the final quality of this printer. The only thing I have to adjust is the way I make my supports. They always marked my prints badly, which reduces the quality. The print was done in ~4 hours.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-slicer.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-printer.jpg"><figcaption></figcaption></figure>
+<h1 id="result">Result</h1>
+<p>It went so well. The reflection of the light is as I had imagined and my measurements were good! Well, almost good, because I had to cut my USB cable to fit my design.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-result-01.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-result-05.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-result-02.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-result-03.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/incubator-v0-2-case-for-electronics-case-result-06.jpg"><figcaption></figcaption></figure>
+</section>
+<aside>
+<p>✎ <span>Created</span> 23/11/2020</p>
+<p>⁂ <span>Updated</span> 23/11/2020</p>
+</aside>
+</article>
+<article class="article--sub" id="incubator-v0-2-web-interface">
+<h1 class="article__title">Web interface <a href="incubator-v0-2-web-interface.html">●</a></h1>
+<section class="article__content ts">
+<p class="todo">To do: Everything :)</p>
+</section>
+<aside>
+<p>✎ <span>Created</span> 24/11/2020</p>
+<p>⁂ <span>Updated</span> 24/11/2020</p>
+</aside>
+</article>
+<article class="article--sub" id="incubator-v0-2-first-tempeh">
+<h1 class="article__title">Our first tempeh <a href="incubator-v0-2-first-tempeh.html">●</a></h1>
+<section class="article__content ts">
+<p class="todo">To do: Everything :)</p>
+<figure class="lg"><img alt="" loading="lazy" src="medias/incubator-v0-2-first-tempeh-yummy.jpg"><figcaption></figcaption></figure>
+</section>
+<aside>
+<p>✎ <span>Created</span> 25/11/2020</p>
+<p>⁂ <span>Updated</span> 25/11/2020</p>
+</aside>
+</article>
+<article class="article--sub" id="incubator-v0-2-cabinet">
+<h1 class="article__title">Cabinet <a href="incubator-v0-2-cabinet.html">●</a></h1>
+<section class="article__content ts">
+<p class="todo">To do: Document this part according to Maud's documentation</p>
+</section>
+<aside>
+<p>✎ <span>Created</span> 01/12/2020</p>
+<p>⁂ <span>Updated</span> 01/12/2020</p>
+</aside>
+</article>
+</article>
+<!-- /content -->
+<footer class="footer">
+<p>antoine.studio ☼ 2022 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoine.studio/rss.xml">RSS Feed</a></p>
+</footer>
+</main>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
