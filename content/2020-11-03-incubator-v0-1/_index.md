@@ -1,5 +1,6 @@
 ---
 title: Incubator v0.1
+open: True
 ---
 
 Together with my partner [Maud Bausier](https://maudb.gitlab.io/dok/), we are making an incubator.

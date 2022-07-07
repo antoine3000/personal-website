@@ -31,15 +31,10 @@
 </nav>
 </header>
 <!-- content -->
-<article class="article index" id="rpi">
+<article class="article" id="rpi">
 <h1 class="article__title">Rasberry Pi</h1>
-<section class="index index--list">
-<ul class="index__list">
-<li class="index__item">
-<a class="index__link" href="rpi-pico.html">Raspberry Pi Pico</a>
-<span class="index__update">21/04/2021</span>
-</li>
-</ul>
+<section class="article__toc">
+<h3 class="toc__title--sub"><a href="rpi.html#rpi-pico">Raspberry Pi Pico ↓</a></h3>
 </section>
 <section class="article__content ts" id="content">
 </section>
@@ -47,6 +42,34 @@
 <p>✎ <span>Created</span> 21/04/2021</p>
 <p>⁂ <span>Updated</span> 21/04/2021</p>
 </footer>
+<article class="article--sub" id="rpi-pico">
+<h1 class="article__title">Raspberry Pi Pico <a href="rpi-pico.html">●</a></h1>
+<section class="article__content ts">
+<h1 id="documentation">Documentation</h1>
+<ul>
+<li><a class="external" href="https://www.raspberrypi.org/documentation/rp2040/getting-started/" target="_blank">Pico documentation</a></li>
+<li><a class="external" href="https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf" target="_blank">Pico MicroPython documentation</a></li>
+</ul>
+<h1 id="installation">Installation</h1>
+<ol>
+<li><a class="external" href="https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython" target="_blank">Install MicroPython</a></li>
+<li>Install rshell <code>pip3 install rshell</code> (<a class="external" href="https://www.twilio.com/blog/programming-raspberry-pi-pico-microcontroller-micropython" target="_blank">guide</a>)</li>
+<li>Install <a class="external" href="https://salsa.debian.org/minicom-team/minicom" target="_blank">Minicom</a> (USB serial) - <a class="external" href="https://aur.archlinux.org/packages/minicom-git/" target="_blank">AUR</a></li>
+</ol>
+<h1 id="use">Use</h1>
+<ol>
+<li>Go to the folder of your choice <code>cd pico/experiments/</code> and create a <code>main.py</code> file that will contain your MicroPython script</li>
+<li>Run <code>rshell -p /dev/ttyACM0 --buffer-size 512</code> where <code>ttyACM0</code> in the Pico adress on your machine. Run <code>dmesg -w</code> to see the devices connected to your computer, and therefore the address of your Pico.</li>
+<li>Copy your local script to the pico by running <code>cp main.py /pyboard/main.py</code></li>
+<li>Close the rshell connection <code>CTRL + x</code> and unplug/plug your Pico</li>
+<li>Run <code>minicom -b 115200 -o -D /dev/ttyACM0</code> to read the serial communiction (replace <code>ttyACM0</code> with your Pico address previously obtained)</li>
+</ol>
+</section>
+<aside>
+<p>✎ <span>Created</span> 21/04/2021</p>
+<p>⁂ <span>Updated</span> 21/04/2021</p>
+</aside>
+</article>
 </article>
 <!-- /content -->
 <footer class="footer">

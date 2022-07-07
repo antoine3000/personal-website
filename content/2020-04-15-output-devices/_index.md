@@ -2,6 +2,7 @@
 title: Output devices
 tags: fab-academy-assignments
 last_update: 2020-11-02
+open: True
 ---
 
 This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.

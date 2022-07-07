@@ -1,6 +1,7 @@
 ---
 title: Computer-aided design
 tags: fab-academy-assignments
+open: True
 ---
 
 A tour of open-source softwares for computer-aided design, in order to discover and learn some of the tools that I will use to design my future projects.

@@ -31,32 +31,18 @@
 </nav>
 </header>
 <!-- content -->
-<article class="article index" id="input-devices">
+<article class="article" id="input-devices">
 <h1 class="article__title">Input devices</h1>
 <p class="article__tags">Tags:
         
         <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 <a class="tag__link" href="tag-to-do.html">#to-do</a>
 </p>
-<section class="index index--list">
-<ul class="index__list">
-<li class="index__item">
-<a class="index__link" href="input-devices-ultrasonic-sensor.html">Ultrasonic sensor HC-SR04</a>
-<span class="index__update">26/03/2020</span>
-</li>
-<li class="index__item">
-<a class="index__link" href="input-devices-thermistor.html">Thermistor</a>
-<span class="index__update">27/03/2020</span>
-</li>
-<li class="index__item">
-<a class="index__link" href="input-devices-moisture-sensor.html">Moisture level sensor</a>
-<span class="index__update">28/03/2020</span>
-</li>
-<li class="index__item">
-<a class="index__link" href="input-devices-sensing-plants-activity.html">Sensing plants activity</a>
-<span class="index__update">15/09/2020</span>
-</li>
-</ul>
+<section class="article__toc">
+<h3 class="toc__title--sub"><a href="input-devices.html#input-devices-ultrasonic-sensor">Ultrasonic sensor HC-SR04 ↓</a></h3>
+<h3 class="toc__title--sub"><a href="input-devices.html#input-devices-thermistor">Thermistor ↓</a></h3>
+<h3 class="toc__title--sub"><a href="input-devices.html#input-devices-moisture-sensor">Moisture level sensor ↓</a></h3>
+<h3 class="toc__title--sub"><a href="input-devices.html#input-devices-sensing-plants-activity">Sensing plants activity ↓</a></h3>
 </section>
 <section class="article__content ts" id="content">
 <p>Let's play with sensors.</p>
@@ -68,6 +54,182 @@
 <p>✎ <span>Created</span> 25/03/2020</p>
 <p>⁂ <span>Updated</span> 02/11/2020</p>
 </footer>
+<article class="article--sub" id="input-devices-ultrasonic-sensor">
+<h1 class="article__title">Ultrasonic sensor HC-SR04 <a href="input-devices-ultrasonic-sensor.html">●</a></h1>
+<section class="article__content ts">
+<p>The ultrasonic sensor HC-SR04 provides 2Cm to 400cm of non-contact measurement functionality with a ranging accuracy that can reach up to 3mm. Here is its <a class="external" href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf" target="_blank">datasheet</a>. This sensor has 4 pins that we have to connect to our dev board.</p>
+<ul>
+<li>5V supply</li>
+<li>Trigger Pulse Input</li>
+<li>Echo Pulse Output</li>
+<li>GND</li>
+</ul>
+<figure class="md"><img alt="uno-ultrasonic-inuse" loading="lazy" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic-inuse.jpg"><figcaption>uno-ultrasonic-inuse</figcaption></figure>
+<p>I'm using an Arduino UNO to use this sensor because it needs a voltage of 5V. Unfortunately, the Barduino and its ESP32 only has a voltage of 3.3V.</p>
+<h2 id="connection">Connection</h2>
+<p>The connection is quite simple, the <code>VCC</code> goes to the <code>5V</code>, the <code>GND</code> to the <code>GND</code>, the <code>Echo</code> to a digital pin, let's say the <code>12</code> and the <code>Trig</code> to another digital pin, the <code>11</code>.</p>
+<figure class="md"><img alt="uno-ultrasonci-schematic" loading="lazy" src="medias/input-devices-ultrasonic-sensor-uno-ultrasonic.jpg"><figcaption>uno-ultrasonci-schematic</figcaption></figure>
+<p>(<a class="external" href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/" target="_blank">image source</a>)</p>
+<h2 id="code">Code</h2>
+<p>Here is the basic code to read data from the ultrasonic sensor, to convert them into readable values (cm) and print it on the serial monitor.</p>
+<p>To quickly create a <a class="external" href="https://platformio.org/" target="_blank">PlatformIO</a> project for the Arduino UNO, open a terminal and navigate to a freshly created folder and type <code>$ pio project init --board uno</code>. As simple as that.</p>
+<p>Create in new <code>main.cpp</code> file into the <code>src</code> folder.</p>
+<pre>
+int trigPin = 11;
+int echoPin = 12;
+long duration, cm;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(5);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  pinMode(echoPin, INPUT);
+  duration = pulseIn(echoPin, HIGH);
+  cm = (duration/2) / 29.1;
+  Serial.print(cm);
+  Serial.print("cm");
+  delay(250);
+}
+</pre>
+<p>Compile it and upload it to the UNO <code>pio run -t upload</code> and open the serial monitor <code>pio device monitor</code> to see the distance value calculated by the ultrasonic sensor. I'm impressed how fast and accurate it is.</p>
+<h3 id="explanations">Explanations</h3>
+<p><code>cm =  (duration/2) / 29.1</code> is how we convert the duration to a distance, using a formula: <code>distance = (traveltime/2) * speed of sound</code>. The speed of sound is <code>343m/s</code> wich is equal to 1/29.1 cm/uS. We need to divide the <code>traveltime</code> by 2 because the wave we sent hit the object and then returned back to the sensor.</p>
+</section>
+<aside>
+<p>✎ <span>Created</span> 26/03/2020</p>
+<p>⁂ <span>Updated</span> 26/03/2020</p>
+</aside>
+</article>
+<article class="article--sub" id="input-devices-thermistor">
+<h1 class="article__title">Thermistor <a href="input-devices-thermistor.html">●</a></h1>
+<section class="article__content ts">
+<p>Or how to measure temperature using a resistor.</p>
+<blockquote>
+<p>To measure the temperature, we need to measure the resistance. However, a microcontroller does not have a resistance-meter built in. Instead, it only has a voltage reader known as a analog-digital-converter. So what we have to do is convert the resistance into a voltage, and we will do that by adding another resistor and connecting them in series. Now you just measure the voltage in the middle, as the resistance changes, the voltage changes too, according to the simple voltage-divider equation. We just need to keep one resistor fixed</p>
+<blockquote>
+<p>Analog Voltage Reading Method, <a class="external" href="https://learn.adafruit.com/thermistor/using-a-thermistor" target="_blank">Adafruit</a></p>
+</blockquote>
+</blockquote>
+<figure class="md"><img alt="thermo-photo-1" loading="lazy" src="medias/input-devices-thermistor-uno-thermo-photo-1.jpg"><figcaption>thermo-photo-1</figcaption></figure>
+<figure class="md"><img alt="thermo-photo-2" loading="lazy" src="medias/input-devices-thermistor-uno-thermo-photo-2.jpg"><figcaption>thermo-photo-2</figcaption></figure>
+<h2 id="connection">Connection</h2>
+<p>The thermistor is linked to the <code>GND</code>, and to the analog pin <code>0</code> and to the <code>5V</code> pin through a 10 resistor.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/input-devices-thermistor-thermistor-setup.png"><figcaption></figcaption></figure>
+<p>(<a class="external" href="https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714" target="_blank">image source</a>)</p>
+<h2 id="code">Code</h2>
+<p>Here is the piece of code that print the value of the analog pin <code>0</code> and convert its values into a Celcius temperature value.</p>
+<pre>
+#include &lt;Arduino.h&gt;
+#include &lt;math.h&gt;
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+// Function that applies the Steinhart-Hart equation
+float thermistor(int val)
+{
+  float temp;
+  // From raw analog values
+  temp = log(((10240000 / val) - 10000));
+  // To Kelvin values
+  temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * temp * temp)) * temp);
+  // Convert Kelvin to Celsius
+  temp = temp - 273.15;
+  return temp;
+}
+
+void loop()
+{
+  int val;
+  float temp;
+  val = analogRead(0);
+  temp = thermistor(val);
+  Serial.print(temp);
+  Serial.println(" °C");
+  delay(1000);
+}
+</pre>
+<p>Main resource: <a class="external" href="https://computers.tutsplus.com/tutorials/how-to-read-temperatures-with-arduino--mac-53714" target="_blank">this tutorial</a></p>
+</section>
+<aside>
+<p>✎ <span>Created</span> 27/03/2020</p>
+<p>⁂ <span>Updated</span> 09/01/2021</p>
+</aside>
+</article>
+<article class="article--sub" id="input-devices-moisture-sensor">
+<h1 class="article__title">Moisture level sensor <a href="input-devices-moisture-sensor.html">●</a></h1>
+<section class="article__content ts">
+<p>Water is a conductive element, and the more water there is in the soil the more electricity can flow through it. So, in order to measure the soil moisture level, we can integrate it into an electrical circuit and measure the voltage. The more voltage in the circuit, the more water there is in the soil.</p>
+<figure class="md"><img alt="moist-setup" loading="lazy" src="medias/input-devices-moisture-sensor-moist-setup.jpg"><figcaption>moist-setup</figcaption></figure>
+<p>To represent it, I built a small system that lights a green LED when the soil is wet and a red LED when it's dry.</p>
+<h2 id="connection">Connection</h2>
+<ul>
+<li>5V from the Arduino UNO to the soil</li>
+<li>A0 (anaolog) from the Arduino UNO to the soil</li>
+<li>A0 (analog) from the Arduino UNO to the GND (analog) through a 10kΩ resistor</li>
+<li>11 (digital) to the red LED through a 220Ω resistor</li>
+<li>12 (digital) to the green LED through a 220Ω resistor</li>
+<li>LED's to the GND (digital)</li>
+</ul>
+<figure class="md"><img alt="moist-closeup" loading="lazy" src="medias/input-devices-moisture-sensor-moist-closeup.jpg"><figcaption>moist-closeup</figcaption></figure>
+<h2 id="code">Code</h2>
+<p>The code is basic. If the analog pin gets a high voltage, it means that the soil is moist and the plant is <em>happy</em> so we turn on the green LED, and vice versa.</p>
+<p>I plan to write a more complex code in the coming weeks, a code that takes into account the amount of water needed for each specific plant, and to alert when it's too dry <em>or</em> too weet.</p>
+<pre>
+int ledGreen = 12;
+int ledRed = 11;
+int contactVal = 0;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledGreen, OUTPUT);
+  pinMode(ledRed, OUTPUT);
+}
+
+void loop() {
+  contactVal = analogRead(0);
+  Serial.println(contactVal);
+  if (contactVal &gt;= 350) {
+    digitalWrite(ledRed, LOW);
+    digitalWrite(ledGreen, HIGH);
+  } else {
+    digitalWrite(ledRed, HIGH);
+    digitalWrite(ledGreen, LOW);
+  }
+  delay(250);
+}
+</pre>
+<p>Here is my tiny system in action, olé.</p>
+<video controls="" preload="auto"><source src="medias/input-devices-moisture-sensor-moist-test.mp4" type="video/mp4"/></video>
+</section>
+<aside>
+<p>✎ <span>Created</span> 28/03/2020</p>
+<p>⁂ <span>Updated</span> 28/03/2020</p>
+</aside>
+</article>
+<article class="article--sub" id="input-devices-sensing-plants-activity">
+<h1 class="article__title">Sensing plants activity <a href="input-devices-sensing-plants-activity.html">●</a></h1>
+<section class="article__content ts">
+<p>In the frame of my Fab Academy final project, I'm exploring how to sense the electrical activity of plants.</p>
+<figure class="md"><img alt="Listen to what we can observe from this lovely plant" loading="lazy" src="medias/input-devices-sensing-plants-activity-IMG_8664.jpg"><figcaption>Listen to what we can observe from this lovely plant</figcaption></figure>
+<p>I covered this topic on a different article.</p>
+<p><a class="btn internal" href="green-observatory-input.html">Sensing plants activity</a></p>
+</section>
+<aside>
+<p>✎ <span>Created</span> 15/09/2020</p>
+<p>⁂ <span>Updated</span> 15/09/2020</p>
+</aside>
+</article>
 </article>
 <!-- /content -->
 <footer class="footer">

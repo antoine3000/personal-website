@@ -1,5 +1,6 @@
 ---
 title: Music player
+open: True
 ---
 
 I would like to have an easy solution to listen to music on the go. My ideal player has an SD card that contains music folders, a 3.5 mm jack input, a removable battery, a black and white screen that shows a minimal interface, and it runs on open-source software.

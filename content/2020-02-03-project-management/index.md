@@ -2,6 +2,7 @@
 title: Project management
 tags: fab-academy-assignments
 last_update: 2020-09-04
+open: True
 ---
 
 An important part of the [Fab Academy](https://fabacademy.org/), apart from learning digital fabrication techniques, consists of documenting everything we do in order to create a shared and open knowledge base between all students, and for everybody.

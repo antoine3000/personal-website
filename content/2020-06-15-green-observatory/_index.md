@@ -2,6 +2,7 @@
 title: The Green Observatory
 tags: fab-academy-assignments
 featured_image: overview.jpg:flux
+open: True
 ---
 
 # Introduction

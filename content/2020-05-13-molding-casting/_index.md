@@ -1,6 +1,7 @@
 ---
 title: Molding and casting
 tags: fab-academy-assignments
+open: True
 ---
 
 

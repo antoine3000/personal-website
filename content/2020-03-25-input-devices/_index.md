@@ -2,6 +2,7 @@
 title: Input devices
 tags: fab-academy-assignments, to-do
 last_update: 2020-11-02
+open: True
 ---
 
 Let's play with sensors.

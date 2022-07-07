@@ -1,6 +1,7 @@
 ---
 title: Electronics design
 tags: fab-academy-assignments
+open: True
 ---
 
 I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.
