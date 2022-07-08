@@ -335,6 +335,9 @@ img {
 .article .index__title {
   margin-bottom: 0; }
 
+.article__content + .index {
+  margin-top: var(--size-lg); }
+
 .article__featured {
   margin-top: var(--size-lg); }
 
