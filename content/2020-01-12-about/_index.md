@@ -7,7 +7,7 @@ last_update: 2020-09-04
 Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).
 
 !!! notes "What's in the making?"
-    Want to know what I'm doing now? Visit my [now](now.html) page.
+    Want to know what I'm doing now? Visit my [[now]] page.
 
 ![antoine-chill](antoine-chill.jpg)
 
