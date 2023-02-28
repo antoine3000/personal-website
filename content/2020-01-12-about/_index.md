@@ -1,10 +1,11 @@
 ---
 title: About
 type: page
-last_update: 2020-09-04
+last_update: 2023-02-28
 ---
 
-Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I recently moved to Barcelona (ES) via a lovely detour by Amsterdam (NL).
+Bonjour, my name is Antoine Jaunard (1990). I'm a designer who codes, a developer who designs, a maker. Based in Barcelona, Spain.
+
 
 !!! notes "What's in the making?"
     Want to know what I'm doing now? Visit my [[now]] page.
@@ -13,9 +14,31 @@ Bonjour, my name is Antoine Jaunard (1990) and I'm from Brussels, Belgium. I rec
 
 # About me
 
+## Domingo Club (2021-)
+
+In march 2021, together with Maud Bausier, we founded [Domingo Club](https://domingoclub.com/), an on/offline space where we design a plant-based and transparent future food system. Our current focus is on our open-source fermenter, a device that promotes plant-based proteins and open-source tools so that anyone can make them at home. We dedicate practice to the benefit of our health, our communities and our planet.
+
+### We have a strong interest in
+
+- digital and decentralised fabrication
+- microorganisms, mycelial network and bio-materials
+- plant-based food and fermentation technology
+- education, open-source and knowledge sharing
+
+
+### Our fields of expertise are
+
+- prototype design and development
+- environmental sensing and physical computing
+- digital fabrication
+- teaching and community building
+
+
 ## Fab Academy (2020)
 
-I'm currently following the [Fab Academy](https://fabacademy.org/) at [Fab Lab Barcelona](https://fablabbcn.org/).
+I'm an alumnus of the design and digital fabrication post-graduate program [Fab Academy](https://fabacademy.org/). I attended the program in [Fab Lab Barcelona](https://fablabbcn.org/).
+
+Fab Academy is a Digital Fabrication programme directed by Neil Gershenfeld of MIT’s Center For Bits and Atoms and based on MIT’s rapid prototyping course: How to Make (Almost) Anything. Fab Academy focuses on personal fabrication – prototyping your ideas into products.
 
 This intensive program is about designing and prototyping projects using digital fabrication tools and machine, such as: computer-controlled cutting, electronics, 3D scanning and printing, electronics design,computer-controlled machining, embedded programming, molding and casting, networking and communications, mechanical design, interface and application programming and machine design.
 
@@ -41,6 +64,6 @@ This website is built with a custom static site generator that I wrote in Python
 
 # Contact
 
-If you want to contact me, don't hesitate to [send me a message](mailto:antoine.stuff@pm.me) on my encrypted email address or to [follow me](https://merveilles.town/@focus404) on an alternative social network that I trust. You can speak to me in French, English, Dutch (*maar alleen een beetje*) or Spanish (*se amable, aprendo*).
+If you want to contact me, don't hesitate to [send me a message](mailto:antoine.stuff@pm.me) on my encrypted email address or to [follow me](https://merveilles.town/@focus404) on an alternative social network that I trust. Or on [another one](https://www.instagram.com/focus.404/) that I should quit.
 
 Oh, there is also my [RSS feed](rss.xml).
