@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoinejaunard.com - documentation</title>
+<meta content="documentation" name="description"/>
+<meta content="antoinejaunard.com" property="schema:name"/>
+<meta content="documentation" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoinejaunard.com</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<!-- content -->
+<article class="article" id="smart-gardening-station">
+<h1 class="article__title">Smart Gardening Station</h1>
+<p class="article__parent">
+        This article is part of:
+        <a href="internet-of-tricks.html">internet-of-tricks</a>.
+      </p>
+<section class="article__content ts" id="content">
+<p>A smart device connected to a plant, which measures the soil moisture level, the ambient temperature and humidity and based on the data collected it waters the plant to meet its needs. The data is published online and a web interface allows direct interaction with the gardening station.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9961.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9969.jpg"><figcaption></figcaption></figure>
+<blockquote>
+<p>This project is open-source and designed to be built and deconstructed, learned and re-appropriated.</p>
+</blockquote>
+<p><a class="btn" href="https://github.com/antoine3000/smart-gardening-station">See the repository on Github</a></p>
+<h2 id="hardware">Hardware</h2>
+<h3 id="components">Components</h3>
+<ul>
+<li>Seeed Studio XIAO ESP32C3</li>
+<li>Grove Shield for Seeed Studio XIAO</li>
+<li>Watering Unit with Mositure Sensor and Pump</li>
+<li>AHT20 Temperature and Humidity Sensor</li>
+<li>iot-gardening-station-cap.stl</li>
+</ul>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9924.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-screenshot-3d.png"><figcaption></figcaption></figure>
+<h3 id="assembly-instructions">Assembly instructions</h3>
+<ol>
+<li>Break the XIAO ESP32 at the divider to reduce its size</li>
+<li>Attach the XIAO ESP32 to the top of the watering unit with a plastic collar</li>
+<li>Connect the antenna to the XIAO ESP32 and stick it on the side of the water unit</li>
+<li>Connect the sensor to the board with a Grove cable to pin 4 and 5</li>
+<li>Connect the water unit to the board with a Grove cable to pin 1 and 2</li>
+<li>Tape the sensor to the base of the watering unit using double-sided tape</li>
+<li>3D print the cap and place it on the unit to cover everything</li>
+</ol>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9941.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9946.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9949.jpg"><figcaption></figcaption></figure>
+<h2 id="software">Software</h2>
+<h3 id="arduino">Arduino</h3>
+<p>Arduino allows us to program our board so that it acts as desired. Create a new arduino project and paste the code from <code>iot-gardening-station-arduino.ino</code> into it. It will most likely be necessary to install the few libraries used.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-screenshot-arduino.png"><figcaption></figcaption></figure>
+<h3 id="node-red">Node-red</h3>
+<p>An instance of Node-red allows us to connect our devices to a dashboard. The easiest way is to have Node-red installed on a Raspberry Pi. Or on another computer that can stay on. Import the code from <a class="external" href="iot-gardening-station-node-red.json" target="_blank">iot-gardening-station-node-red.json</a> into the Node-red dashboard to configure the dashboard and its connections as desired.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-screenshot-nodered.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9975.jpg"><figcaption></figcaption></figure>
+<p>Nodes: <a class="external" href="http://127.0.0.1:1880/" target="_blank">http://127.0.0.1:1880/</a>
+Interface: <a class="external" href="http://127.0.0.1:1880/ui" target="_blank">http://127.0.0.1:1880/ui</a></p>
+<h2 id="links-and-references">Links and references</h2>
+<ul>
+<li><a class="external" href="https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/" target="_blank">Getting Started with Seeed Studio XIAO ESP32C3</a></li>
+<li><a class="external" href="https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&amp;Humidity-Sensor/" target="_blank">Grove - AHT20 I2C Industrial Grade Temperature&amp;Humidity Sensor</a></li>
+<li><a class="external" href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries" target="_blank">Arduino IDE - Importing a .zip Library</a></li>
+<li><a class="external" href="https://www.raspberrypi.com/software/" target="_blank">Raspberry Pi Install</a></li>
+<li><a class="external" href="https://www.raspberrypi.com/documentation/computers/remote-access.html#installing-vnc-on-raspberry-pi" target="_blank">Raspberry Pi Remote Access</a></li>
+<li><a class="external" href="https://nodered.org/docs/getting-started/raspberrypi" target="_blank">Running Node Red on the RPI</a></li>
+<li><a class="external" href="https://microcontrollerslab.com/install-node-red-raspberry-pi/" target="_blank">Configuring Node Red</a></li>
+<li><a class="external" href="https://microcontrollerslab.com/esp32-mqtt-publish-multiple-sensor-readings-node-red/" target="_blank">MQTT Publish Multiple Sensors to Node Red</a></li>
+<li><a class="external" href="https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/" target="_blank">ESP32 MQTT – Publish and Subscribe with Arduino IDE</a></li>
+<li><a class="external" href="https://gallaugher.com/setting-up-a-mosquitto-mqtt-broker-on-a-raspberry-pi/" target="_blank">Setting up a Mosquitto-MQTT Broker on a Raspberry Pi</a></li>
+<li><a class="external" href="https://wiki.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip/#hardware-connection" target="_blank">Grove Shield Pinout</a></li>
+<li><a class="external" href="https://github.com/m5stack/M5Stack/blob/master/examples/Unit/WATERING/WATERING.ino" target="_blank">Watering Unit example</a></li>
+<li><a class="external" href="https://medium.com/@nikhilagarwal1701/how-to-connect-to-your-raspberry-pi-over-different-network-from-your-device-b650cb372ea" target="_blank">Remote Access with remote.it</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p>The code is under the <a class="external" href="LICENSE" target="_blank">MIT LICENSE</a>, the assets are <a class="external" href="LICENSE.by-nc-sa-4.0.md" target="_blank">BY-NC-SA 4.0</a>.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9967.jpg"><figcaption></figcaption></figure>
+</section>
+<footer>
+<p>✎ <span>Created</span> 11/02/2023</p>
+<p>⁂ <span>Updated</span> 11/02/2023</p>
+</footer>
+</article>
+<!-- /content -->
+<footer class="footer">
+<p>antoinejaunard.com ☼ 2022 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>
+</footer>
+</main>
+</body>
+</html>

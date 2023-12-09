@@ -18,3 +18,38 @@
     margin-bottom: var(--size-xxs);
   }
 }
+
+// grid
+.grid {
+  list-style: none;
+  display: grid;
+  grid-gap: var(--size-xl);
+  margin-top: var(--size-xxl);
+  @include media('>=sm') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media('>=xxl') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .item__link {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--base-color);
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  .item__img {
+    display: block;
+    width: 100%;
+  }
+  .item__title {
+    display: block;
+    @extend %ts-title-3;
+    margin-top: var(--size-xs);
+  }
+}

@@ -1,12 +1,13 @@
 title: "antoinejaunard.com"
 description: "documentation"
 main_url: "https://antoinejaunard.com"
-introduction: "Continuous process ✄ This website ☼ is my digital studio, a place where I can experiment without ⁂ constraints. It's also my personal assistant, it helps me when I'm not sure how to do ✿ something I've done before. It invites me to write (and then find) my personal knowledge ⧉ online. Welcome&nbsp;✺"
+introduction: "This website ✺ is my digital studio, a place where I can experiment without ⁂ constraints. It's also my personal assistant, it helps me when I'm not sure how to do ✿ something I've done before. It invites me to write (and then find) my personal knowledge ⧉ online. Welcome."
 navigation:
   "antoinejaunard.com": "index"
   "content": "content"
   "flux": "flux"
   "about": "about"
+# index: [meditation-link, smart-gardening-station]
 flux:
   visibility: True
   title: "flux"

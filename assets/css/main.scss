@@ -2,18 +2,18 @@
 @import "dok/assets/css/main.scss";
 // Personal
 @import "utils/typography.scss";
+@import "utils/mixins.scss";
 @import "components/home.scss";
 @import "components/index.scss";
 @import "components/article.scss";
+@import "components/device.scss";
 
 
 :root {
   --body-color: #cfcfcf;
-  // --base-color: #000000;
+  --base-color: #000000;
   --action-color: var(--base-color);
   --special-color: var(--base-color);
-  --special-color-1: rgb(113, 52, 255);
-  --special-color-2: rgb(113, 52, 255);
   --content-max-width: 720px;
 }
 

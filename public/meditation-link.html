@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title property="schema:name">antoinejaunard.com - documentation</title>
+<meta content="documentation" name="description"/>
+<meta content="antoinejaunard.com" property="schema:name"/>
+<meta content="documentation" property="schema:description"/>
+<link href="assets/main.min.css" rel="stylesheet"/>
+</head>
+<body class="page page--article">
+<main class="main">
+<header class="header">
+<nav class="nav">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="index.html">antoinejaunard.com</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="content.html">content</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="flux.html">flux</a>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="about.html">about</a>
+</li>
+</ul>
+</nav>
+</header>
+<!-- content -->
+<article class="article" id="meditation-link">
+<h1 class="article__title">Meditation Link</h1>
+<p class="article__parent">
+        This article is part of:
+        <a href="internet-of-tricks.html">internet-of-tricks</a>.
+      </p>
+<section class="article__content ts" id="content">
+<p>What can technology teach us? What is the scope of objects connected to the Internet? How can they be introduced to the new generations? What are the advantages and disadvantages of such objects? These are the kinds of questions that the European project Internet of Tricks has asked us to consider. We are developing educational kits through which we will run workshops about the place of technology and connected objects in our society.</p>
+<p>What is the place of technology in our contemporary lives and what do we want to do with it?</p>
+<figure class="md"><img alt="Meditation Link, a tool for teaching and questioning technology" loading="lazy" src="medias/meditation-link-IMG_0209.jpg"><figcaption>Meditation Link, a tool for teaching and questioning technology</figcaption></figure>
+<p>Meditation Link invites participants to close their eyes and meditate. This object, equipped with a camera, analyses the participants to detect their level of meditation and communicates from one object to another, inviting others to join a collective meditation.</p>
+<blockquote>
+<p>This project is open-source and designed to be built and deconstructed, learned and re-appropriated.</p>
+</blockquote>
+<p><a class="btn" href="https://github.com/antoine3000/iot-meditation-link">See the repository on Github</a></p>
+<h2 id="hardware">Hardware</h2>
+<h3 id="components">Components</h3>
+<ul>
+<li><a class="external" href="https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/" target="_blank">Seeed Studio Wio Terminal</a></li>
+<li><a class="external" href="https://wiki.seeedstudio.com/Grove-Vision-AI-Module/" target="_blank">Grove AI Vision</a></li>
+<li>Grove RGB LED Stick</li>
+<li><a class="external" href="iot-meditation-link-support.stl" target="_blank">3D-printed support</a></li>
+</ul>
+<h3 id="assembly-instructions">Assembly instructions</h3>
+<ol>
+<li>3D print the enclosure</li>
+<li>Connect the Grove AI vision on the left port of the Wio Terminal</li>
+<li>Connect the RGB LED Stick on the right port of the Wio Terminal</li>
+<li>Fit the camera, terminal and LED to the <a class="external" href="iot-meditation-link-support.stl" target="_blank">3D-printed support</a></li>
+<li>Power the Wio Terminal with a USB-C cable</li>
+</ol>
+<figure class="md"><img alt="Assembly, mounted and unmounted" loading="lazy" src="medias/meditation-link-IMG_0185.jpg"><figcaption>Assembly, mounted and unmounted</figcaption></figure>
+<figure class="md"><img alt="Assembly, back side" loading="lazy" src="medias/meditation-link-IMG_0212.jpg"><figcaption>Assembly, back side</figcaption></figure>
+<figure class="md"><img alt="3D design in Fusion 360" loading="lazy" src="medias/meditation-link-screenshot-fusion.png"><figcaption>3D design in Fusion 360</figcaption></figure>
+<h2 id="software">Software</h2>
+<h3 id="ai-camera">AI Camera</h3>
+<h4 id="resources">Resources</h4>
+<ol>
+<li><a class="external" href="https://colab.research.google.com/gist/lakshanthad/b47a1d1a9b4fac43449948524de7d374/yolov5-training-for-sensecap-a1101.ipynb" target="_blank">Google Collab Sketch</a></li>
+<li><a class="external" href="https://universe.roboflow.com/112fkdldjs-gmail-com/eye_open-and-close-test-2/browse?queryText=&amp;pageSize=50&amp;startingIndex=0&amp;browseQuery=true" target="_blank">Images dataset</a></li>
+</ol>
+<h4 id="method">Method</h4>
+<p>For the camera to recognise what we want it to recognise, we need to train it with classified images. For this project we chose the image set of open or closed eyes, in order to deduce whether a person is meditating or not.</p>
+<p>A relatively complicated code and the installation of a multitude of tools are required to train the AI model. We are not going to do this on our own computer but rather directly on a Google computer in a pre-configured environment. The image set is on Roboflow. We will use this website for our images. Creating an account is necessary.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/meditation-link-screenshot-collab.png"><figcaption></figcaption></figure>
+<ul>
+<li>Click on the [ ] at the top right of each block, one by one, to execute the code. Wait for the end of a block before starting the next one.</li>
+<li>For step 4, you will need the download code from the Roboflow dataset page. To get it, click on Export and copy the code.</li>
+<li>The step 6 is the longest, the computer is now learning all it can from the images provided. Be patient.</li>
+<li>When everything is finished, download the UF2 file to your computer.</li>
+<li>Once connected to the USB port of your computer, the camera can be put into bootloader mode by double-clicking the BOOT button.</li>
+<li>A drive will be mounted on your computer with the name GROVEAI. You can drag and drop the previously generated UF2 file into this drive to flash the camera.</li>
+<li>The GROVEAI drive will disappear indicating the firmware has been uploaded.</li>
+</ul>
+<h3 id="arduino">Arduino</h3>
+<p>Arduino allows us to program our board so that it acts as desired. Create a new arduino project and paste the code from iot-meditation-link-arduino.ino into it. It will most likely be necessary to install the few libraries used.</p>
+<figure class="md"><img alt="" loading="lazy" src="medias/meditation-link-screenshot-arduino.png"><figcaption></figcaption></figure>
+<figure class="md"><img alt="Complete setup, with both devices" loading="lazy" src="medias/meditation-link-IMG_0195.jpg"><figcaption>Complete setup, with both devices</figcaption></figure>
+<h2 id="links-and-references">Links and references</h2>
+<ul>
+<li><a class="external" href="https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/" target="_blank">WIO Terminal - Getting Started</a></li>
+<li><a class="external" href="https://wiki.seeedstudio.com/Get-Started-with-Wio-Terminal-and-Wappsto-IoT/" target="_blank">Get started with WIO Terminal and Wappsto IOT</a></li>
+<li><a class="external" href="https://wiki.seeedstudio.com/Train-Deploy-AI-Model/" target="_blank">Train and deploy your own AI model</a></li>
+<li><a class="external" href="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI" target="_blank">Arduino Library for Grove Vision AI</a></li>
+<li><a class="external" href="https://www.disk91.com/2023/technology/internet-of-things-technology/seeed-wioterminal-ai-grove-camera/" target="_blank">Disk91 - Seeed WioTerminal AI grove camera</a></li>
+<li><a class="external" href="https://universe.roboflow.com/112fkdldjs-gmail-com/eye_open-and-close-test-2/browse?queryText=&amp;pageSize=50&amp;startingIndex=0&amp;browseQuery=true" target="_blank">Image dataset</a></li>
+<li><a class="external" href="https://colab.research.google.com/gist/lakshanthad/b47a1d1a9b4fac43449948524de7d374/yolov5-training-for-sensecap-a1101.ipynb#scrollTo=zY8GOqDKM41s" target="_blank">Google Colab</a> </li>
+<li><a class="external" href="https://makersportal.com/blog/2020/3/27/simple-breathing-led-in-arduino" target="_blank">simple breathing LED with arduino</a></li>
+<li><a class="external" href="https://files.seeedstudio.com/grove_ai_vision/index.html" target="_blank">See camera in the browser</a></li>
+<li><a class="external" href="https://github.com/kitesurfer1404/WS2812FX/blob/master/extras/WS2812FX%20Users%20Guide.md" target="_blank">NeoPixel Library</a></li>
+<li><a class="external" href="https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/#installing-the-tft-lcd-library-separately" target="_blank">TFT LCD library</a></li>
+<li><a class="external" href="https://www.hackster.io/Salmanfarisvp/mqtt-on-wio-terminal-4ea8f8" target="_blank">MQTT on Wio Terminal</a></li>
+<li><a class="external" href="https://passwordsgenerator.net/" target="_blank">Password generator</a></li>
+</ul>
+<hr/>
+<figure class="md"><img alt="First prototype" loading="lazy" src="medias/meditation-link-IMG_0027.jpg"><figcaption>First prototype</figcaption></figure>
+<figure class="md"><img alt="Testing the device, with closed eyes, not the easiest hehe" loading="lazy" src="medias/meditation-link-IMG_0008.jpg"><figcaption>Testing the device, with closed eyes, not the easiest hehe</figcaption></figure>
+<figure class="md"><img alt="" loading="lazy" src="medias/meditation-link-IMG_0012.jpg"><figcaption></figcaption></figure>
+<h2 id="license">License</h2>
+<p>The code is under the <a class="external" href="LICENSE" target="_blank">MIT LICENSE</a>, the assets are <a class="external" href="LICENSE.by-nc-sa-4.0.md" target="_blank">BY-NC-SA 4.0</a>.</p>
+</section>
+<footer>
+<p>✎ <span>Created</span> 10/02/2023</p>
+<p>⁂ <span>Updated</span> 10/02/2023</p>
+</footer>
+</article>
+<!-- /content -->
+<footer class="footer">
+<p>antoinejaunard.com ☼ 2022 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>
+</footer>
+</main>
+</body>
+</html>
