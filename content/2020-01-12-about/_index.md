@@ -4,11 +4,24 @@ type: page
 last_update: 2023-02-28
 ---
 
-Bonjour, my name is Antoine Jaunard (1990). I'm a designer who codes, a developer who designs, a maker. Based in Barcelona, Spain.
+Bonjour, my name is Antoine Jaunard (1990), I'm a designer from Brussels, Belgium, and now based in Barcelona, Spain.
+
+I consider myself a creative technologist with a particular interest in the intersection between the physical and the digital. I have extensive experience in graphic design and web development, as well as a good knowledge of digital fabrication techniques and product design. In addition, microorganisms such as bacteria and mycelium fascinate and inspire me, inviting me to develop special tools for their cultivation.
+
+# Contact
 
 
-!!! notes "What's in the making?"
-    Want to know what I'm doing now? Visit my [[now]] page.
+- [email](mailto:antoine.stuff@pm.me)
+- [instagram](https://www.instagram.com/focus.404/)
+- [mastodon](https://merveilles.town/@focus404)
+- [linkedin](https://www.linkedin.com/in/antoine-jaunard-409aba215/)
+
+# Now
+
+- Teaching *Coding and Electronics* to young people at an active learning school called [Learnlife](https://www.learnlife.com/)
+- Teaching *Physical Computing and Environmental Sensing* to masters in advanced architecture at [the Institute for Advanced Architecture of Catalonia](https://iaac.net/) (IAAC)
+- Designing and developping websites for clients I value and trust.
+- Promoting plant proteins and the use of bio-materials by exploring mycelium in a global design project called [Domingo Club](https://domingoclub.com/).
 
 ![antoine-chill](antoine-chill.jpg)
 
@@ -60,10 +73,4 @@ This website is my digital studio, a place where I can experiment without constr
 It's also my personal assistant, it helps me when I doubt on how to do something I have done before. It invites me to write (and then find) my personal knowledge online.
 A tool for documenting the things I learn.
 
-This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on [Gitlab](https://gitlab.com/antoinestudio/dok-antoine-studio).
-
-# Contact
-
-If you want to contact me, don't hesitate to [send me a message](mailto:antoine.stuff@pm.me) on my encrypted email address or to [follow me](https://merveilles.town/@focus404) on an alternative social network that I trust. Or on [another one](https://www.instagram.com/focus.404/) that I should quit.
-
-Oh, there is also my [RSS feed](rss.xml).
+This website is built with a custom static site generator that I wrote in Python. It's open-source by default, as all the things I (try to) do. Sources are available on [Github](https://github.com/antoine3000/personal-website).
