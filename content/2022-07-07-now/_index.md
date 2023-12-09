@@ -1,9 +1,9 @@
 ---
 title: Now
-last_update: 2023-05-22
+last_update: 2023-12-09
 ---
 
-- Designing an open-source fermenter with [Domingo Club](https://domingoclub.com/)
-- Organising workshops around fermented food and open-source tools with [Domingo Club](https://domingoclub.com/)
-- Writing a comprehensive documentation on digital fabrication techniques for [Fab Lab Barcelona](https://fablabbcn.org/)
-- Reading, researching on mycelium as a structural biomaterial
+- Teaching *Coding and Electronics* to young people at an active learning school called [Learnlife](https://www.learnlife.com/)
+- Teaching *Physical Computing and Environmental Sensing* to masters in advanced architecture at [the Institute for Advanced Architecture of Catalonia](https://iaac.net/) (IAAC)
+- Designing and developping websites for clients I value and trust.
+- Promoting plant proteins and the use of bio-materials by exploring mycelium in a global design project called [Domingo Club](https://domingoclub.com/).
