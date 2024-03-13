@@ -61,6 +61,9 @@
     max-width: 100%;
     max-height: 90vh;
   }
+  figure:not(.device) img {
+    border-radius: 10px;
+  }
 }
 
 .player {

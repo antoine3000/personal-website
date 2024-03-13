@@ -583,6 +583,9 @@ a, .index--featured .item__title {
   max-width: 100%;
   max-height: 90vh; }
 
+.ts figure:not(.device) img {
+  border-radius: 10px; }
+
 .player {
   margin-bottom: var(--size-md); }
 
