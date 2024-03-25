@@ -5,15 +5,20 @@
   border: var(--border-sm) dotted var(--base-color);
   padding: var(--size-md);
   border-radius: var(--size-md);
+  a {
+    --body-color: #000000;
+    @extend %ts-link;
+    background: transparent;
+    text-decoration: underline;
+  }
 }
 
 .toc__title {
   @extend %ts-title-3;
-  margin-bottom: var(--size-md);
-}
-
-.article__toc .toc__title--sub {
-  font-size: var(--size-sm);
+  margin-bottom: var(--size-xs);
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .article--sub {

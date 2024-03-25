@@ -122,7 +122,7 @@ body, .index--grid .index__list figcaption, .article figure figcaption, .article
 .ts strong em {
   font-family: var(--font-body-bold-italic); }
 
-a, .index--featured .item__title {
+.article__toc a, a, .index--featured .item__title {
   color: var(--base-color);
   text-decoration: none;
   background-color: var(--action-color); }
@@ -462,10 +462,10 @@ body {
   line-height: 1.5;
   word-spacing: -0.15em; }
 
-a, .index--featured .item__title {
+.article__toc a, a, .index--featured .item__title {
   background: var(--special-color); }
 
-a, .index--featured .item__title {
+.article__toc a, a, .index--featured .item__title {
   color: var(--body-color);
   padding: 0.2em;
   text-decoration: none;
@@ -541,12 +541,15 @@ a, .index--featured .item__title {
   border: var(--border-sm) dotted var(--base-color);
   padding: var(--size-md);
   border-radius: var(--size-md); }
+  .article__toc a, .article__toc .index--featured .item__title, .index--featured .article__toc .item__title {
+    --body-color: #000000;
+    background: transparent;
+    text-decoration: underline; }
 
 .toc__title {
-  margin-bottom: var(--size-md); }
-
-.article__toc .toc__title--sub {
-  font-size: var(--size-sm); }
+  margin-bottom: var(--size-xs); }
+  .toc__title:last-child {
+    margin-bottom: 0; }
 
 .article--sub {
   margin-top: var(--size-xl);
