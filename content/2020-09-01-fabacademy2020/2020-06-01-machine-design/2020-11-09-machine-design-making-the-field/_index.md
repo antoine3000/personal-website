@@ -1,6 +1,6 @@
 ---
 title: Making the field
-featured_image: mounting-plate.jpg:flux
+featured_image: mounting-plate.jpg
 ---
 
 

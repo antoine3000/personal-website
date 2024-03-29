@@ -1,6 +1,6 @@
 ---
 title: Prototype of an indoor growing system
-featured_image: grow-light-05.jpg:flux
+featured_image: grow-light-05.jpg
 ---
 
 TODO: Document everyting
@@ -12,4 +12,4 @@ TODO: Document everyting
 ![](grow-light-02.jpg)
 ![](grow-light-03.jpg)
 ![](grow-light-04.jpg)
-![](grow-light-05.jpg)
+![](grow-light-05.jpg:flux)

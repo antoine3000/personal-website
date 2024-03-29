@@ -2,7 +2,7 @@
 title: Machine design
 tags: fab-academy-assignments, to-review
 last_update: 2020-11-10
-featured_image: team.png:flux
+featured_image: logic.jpg
 open: True
 ---
 

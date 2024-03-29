@@ -1,6 +1,6 @@
 ---
 title: Electronics
-featured_image: pcb-result.jpg:flux
+featured_image: pcb-result.jpg
 ---
 
 This is the continuation of [the electronics of the v0.1](incubator-v0-1-electronics.html).
@@ -46,7 +46,7 @@ While making the schematics, I called the 3.3 volt line "3V3" and "3.3V", which 
 
 The prototype now works perfectly. The DHT11 sensor measures the temperature and humidity inside the box, the heating pad heats to maintain the temperature at the desired value and the fan circulates the air to distribute the heat properly.
 
-![](electronics-result-01.jpg)
+![](electronics-result-01.jpg:flux)
 ![](electronics-result-02.jpg)
 ![](electronics-result-03.jpg)
 

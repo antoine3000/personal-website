@@ -1,6 +1,6 @@
 ---
 title: Web interface
-featured_image: interface.jpg:flux
+featured_image: interface.jpg
 ---
 
 TODO: Everything :)

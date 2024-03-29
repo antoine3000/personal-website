@@ -1,6 +1,6 @@
 ---
 title: Interface example
-featured_image: incubator-interface.jpg:flux
+featured_image: incubator-interface.jpg
 ---
 
 To make sure I understand how a web interface is made via an ESP32, I started with a very basic example. The only thing this minimal example will do is to light on and off the RGB LED connected to the Barduino (ESP32) through the incubator shield I designed via a web interface accessible from any browser (desktop and mobile).

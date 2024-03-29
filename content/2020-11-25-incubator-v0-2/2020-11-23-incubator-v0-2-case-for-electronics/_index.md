@@ -1,6 +1,6 @@
 ---
 title: A case for the electronics
-featured_image: case-result-01.jpg:flux
+featured_image: case-result-01.jpg
 ---
 
 Now that the [electronics](incubator-v0-2-electronics.html) is working, I need to protect it a little to avoid mishandling that could damage it. To do this, I will design a case which will then be printed in 3D.
@@ -47,7 +47,7 @@ I printed this project at home using our new Mini Prusa 3D printer. I'm always a
 
 It went so well. The reflection of the light is as I had imagined and my measurements were good! Well, almost good, because I had to cut my USB cable to fit my design.
 
-![](case-result-01.jpg)
+![](case-result-01.jpg:flux)
 ![](case-result-05.jpg)
 ![](case-result-02.jpg)
 ![](case-result-03.jpg)

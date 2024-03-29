@@ -1,8 +1,8 @@
 ---
 title: Our first tempeh
-featured_image: first-tempeh.jpg:flux
+featured_image: first-tempeh.jpg
 ---
 
 TODO: Everything :)
 
-![](large:yummy.jpg)
+![](large:yummy.jpg:flux)

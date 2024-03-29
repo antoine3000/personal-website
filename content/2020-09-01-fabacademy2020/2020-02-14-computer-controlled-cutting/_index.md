@@ -1,7 +1,7 @@
 ---
 title: Computer-controlled cutting
 tags: fab-academy-assignments
-featured_image: dome-construct-1.jpg
+featured_image: password-final.jpg
 open: True
 ---
 

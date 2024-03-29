@@ -1,6 +1,6 @@
 ---
 title: Purify indoor air with moss
-featured_image: 01.jpg:flux
+featured_image: 01.jpg
 ---
 
 I am investigating what could be a low-maintenance, low-tech solution to purify indoor air, and my research has naturally led me to moss and its purifying properties.
