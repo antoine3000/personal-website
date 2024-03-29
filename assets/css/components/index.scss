@@ -53,3 +53,44 @@
     margin-top: var(--size-xs);
   }
 }
+
+.page--content {
+  .index--grid .index__list {
+    @include media('>=sm') {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @include media('>=xxl') {
+      grid-template-columns: repeat(9, 1fr);
+    }
+  }
+}
+
+.card {
+  display: block;
+  img,
+  .index__color {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    border: 1px solid var(--base-color);
+    background-color: var(--base-color);
+  }
+  .index__color {
+    background-color: red;
+  }
+  .index__link {
+    display: block;
+    background-color: transparent;
+  }
+  .index__title {
+    color: var(--base-color);
+    @extend %ts-body;
+    margin-top: var(--size-xs);
+    margin-bottom: var(--size-xxs);
+  }
+  .tags__link {
+    @extend %ts-small;
+    margin-bottom: var(--size-xxs);
+  }
+ }
