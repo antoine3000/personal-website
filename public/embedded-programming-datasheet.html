@@ -31,9 +31,9 @@
 <article class="article" id="embedded-programming-datasheet">
 <h1 class="article__title">How to read a datasheet</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="embedded-programming.html">embedded-programming</a>.
-      </p>
+    This article is part of:
+    <a href="embedded-programming.html">embedded-programming</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>Reading a datasheet isn't the easiest thing to do. It is full of technical details that often interfere with the actual data one can look after.</p>
 <p>I'll now take a tour of the things that seem important to me when reading a datasheet. And for that, we'll have a look at the <a class="external" href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-16-17-DataSheet-DS40002204A.pdf" target="_blank">datasheet of the ATTiny1614</a> from Microship.</p>
@@ -53,8 +53,36 @@
 <footer>
 <p>✎ <span>Created</span> 19/03/2020</p>
 <p>⁂ <span>Updated</span> 19/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-18-embedded-programming/2020-03-19-embedded-programming-datasheet/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

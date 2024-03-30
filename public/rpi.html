@@ -31,16 +31,21 @@
 <article class="article" id="rpi">
 <h1 class="article__title">Rasberry Pi</h1>
 <section class="article__toc">
-<h3 class="toc__title"><a href="rpi.html#rpi-pico">Raspberry Pi Pico ↓</a></h3>
+<h3 class="toc__title">
+<a href="rpi.html#rpi-pico">Raspberry Pi Pico ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 </section>
 <footer>
 <p>✎ <span>Created</span> 21/04/2021</p>
 <p>⁂ <span>Updated</span> 21/04/2021</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2021-04-21-rpi/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="rpi-pico">
-<h1 class="article__title">Raspberry Pi Pico <a href="rpi-pico.html">●</a></h1>
+<h1 class="article__title">
+      Raspberry Pi Pico <a href="rpi-pico.html">●</a>
+</h1>
 <section class="article__content ts">
 <h1 id="documentation">Documentation</h1>
 <ul>
@@ -65,9 +70,37 @@
 <aside>
 <p>✎ <span>Created</span> 21/04/2021</p>
 <p>⁂ <span>Updated</span> 21/04/2021</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2021-04-21-rpi/2021-04-21-rpi-pico/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

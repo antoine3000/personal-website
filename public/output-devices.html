@@ -31,15 +31,17 @@
 <article class="article" id="output-devices">
 <h1 class="article__title">Output devices</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="fabacademy2020.html">fabacademy2020</a>.
-      </p>
-<p class="article__tags">Tags:
-        
-        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+    This article is part of:
+    <a href="fabacademy2020.html">fabacademy2020</a>.
+  </p>
+<p class="article__tags">
+    Tags: 
+    <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <section class="article__toc">
-<h3 class="toc__title"><a href="output-devices.html#output-devices-incubator">Prototyping an incubator ↓</a></h3>
+<h3 class="toc__title">
+<a href="output-devices.html#output-devices-incubator">Prototyping an incubator ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <p>This week's assignement is about output devices: we are learning how to make various motors work, what are their mechanisms and principles, when and why use a specific one instead of another.</p>
@@ -85,9 +87,12 @@ Image source: <a class="external" href="https://www.youtube.com/watch?v=LXURLvga
 <footer>
 <p>✎ <span>Created</span> 15/04/2020</p>
 <p>⁂ <span>Updated</span> 02/11/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-04-15-output-devices/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="output-devices-incubator">
-<h1 class="article__title">Prototyping an incubator <a href="output-devices-incubator.html">●</a></h1>
+<h1 class="article__title">
+      Prototyping an incubator <a href="output-devices-incubator.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>As I said, my partner is building an incubator to help us grow mycellium (and other fermented food) and she asked me an hand to help her with the electronic part. In this context, I will prototype an incubator by using the devices I already have. I will do it by following the spiral methodology: a first round with the basic features, and then other ones with additional options.</p>
 <h2 id="update-2020-11">Update 2020-11</h2>
@@ -200,9 +205,37 @@ void loop(){
 <aside>
 <p>✎ <span>Created</span> 16/04/2020</p>
 <p>⁂ <span>Updated</span> 16/04/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-04-15-output-devices/2020-04-16-output-devices-incubator/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

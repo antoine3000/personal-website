@@ -31,7 +31,9 @@
 <article class="article" id="dok">
 <h1 class="article__title">Dok</h1>
 <section class="article__toc">
-<h3 class="toc__title"><a href="dok.html#features">What Dok can do ↓</a></h3>
+<h3 class="toc__title">
+<a href="dok.html#features">What Dok can do ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <p>In 2020, I started writing the software that would allow me to publish my personal website online. I've called it Dok, and it's my customised static site generation tool, which meets all my needs perfectly.</p>
@@ -46,17 +48,48 @@
 <footer>
 <p>✎ <span>Created</span> 25/03/2024</p>
 <p>⁂ <span>Updated</span> 25/03/2024</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2024-03-25-dok/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="features">
-<h1 class="article__title">What Dok can do <a href="features.html">●</a></h1>
+<h1 class="article__title">
+      What Dok can do <a href="features.html">●</a>
+</h1>
 <section class="article__content ts">
 </section>
 <aside>
 <p>✎ <span>Created</span> 05/03/2024</p>
 <p>⁂ <span>Updated</span> 05/03/2024</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2024-03-25-dok/2024-03-05-features/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

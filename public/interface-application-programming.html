@@ -31,16 +31,20 @@
 <article class="article" id="interface-application-programming">
 <h1 class="article__title">Interface application programming</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="fabacademy2020.html">fabacademy2020</a>.
-      </p>
-<p class="article__tags">Tags:
-        
-        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+    This article is part of:
+    <a href="fabacademy2020.html">fabacademy2020</a>.
+  </p>
+<p class="article__tags">
+    Tags: 
+    <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <section class="article__toc">
-<h3 class="toc__title"><a href="interface-application-programming.html#interface-application-programming-my-coding-journey">My coding journey ↓</a></h3>
-<h3 class="toc__title"><a href="interface-application-programming.html#interface-application-programming-first-of-application">My first openFrameworks application ↓</a></h3>
+<h3 class="toc__title">
+<a href="interface-application-programming.html#interface-application-programming-my-coding-journey">My coding journey ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="interface-application-programming.html#interface-application-programming-first-of-application">My first openFrameworks application ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <p>This week is devoted to programming interfaces and applications, a subject that I really like. I would not say that I am a good programmer, I have little experience. But it's something I love to do: solve logic problems, create software that produces the result I want (or the result I didn't expect, because I also find unexpected things beautiful).</p>
@@ -52,9 +56,12 @@
 <footer>
 <p>✎ <span>Created</span> 22/04/2020</p>
 <p>⁂ <span>Updated</span> 22/04/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-04-22-interface-application-programming/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="interface-application-programming-my-coding-journey">
-<h1 class="article__title">My coding journey <a href="interface-application-programming-my-coding-journey.html">●</a></h1>
+<h1 class="article__title">
+      My coding journey <a href="interface-application-programming-my-coding-journey.html">●</a>
+</h1>
 <section class="article__content ts">
 <h1 id="processing-java-javascript">Processing (Java / Javascript)</h1>
 <p>In art school, I had two years of digital art workshops. The main tool we used in this class was <a class="external" href="https://processing.org/" target="_blank">Processing</a>. And it was so refreshing. Being able to produce an artistic installation with algorithms was something I was looking for. But it was also the rise of another movement: Internet culture. This quickly made me drop Processing for its javascript version, <a class="external" href="https://p5js.org/" target="_blank">p5js</a> and html/css, in order to create websites. It was not really good, Processing (p5js) is not so exciting when it is stuck in a browser. But the mix of graphic design and coding was definitely the right direction for me. I had the insight I needed with Processing and the motivation to continue creating websites, and then to found my web studio.</p>
@@ -74,10 +81,13 @@
 <aside>
 <p>✎ <span>Created</span> 23/04/2020</p>
 <p>⁂ <span>Updated</span> 23/04/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-04-22-interface-application-programming/2020-04-23-interface-application-programming-my-coding-journey/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="interface-application-programming-first-of-application">
-<h1 class="article__title">My first openFrameworks application <a href="interface-application-programming-first-of-application.html">●</a></h1>
+<h1 class="article__title">
+      My first openFrameworks application <a href="interface-application-programming-first-of-application.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>For my first openFrameworks application, I would like to get sensor data and convert it to an interactive visual and audio piece. I'm going to use the <a class="external" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview" target="_blank">Circuit Playground Express</a> and its multiple integrated sensors and buttons to help me quickly prototype my idea.</p>
 <h1 id="installation">Installation</h1>
@@ -254,9 +264,37 @@ play the <code>cymbal</code> sound</li>
 <aside>
 <p>✎ <span>Created</span> 24/04/2020</p>
 <p>⁂ <span>Updated</span> 24/04/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-04-22-interface-application-programming/2020-04-24-interface-application-programming-first-of-application/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

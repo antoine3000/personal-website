@@ -31,25 +31,32 @@
 <article class="article" id="computer-controlled-machining">
 <h1 class="article__title">Computer-controlled machining</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="fabacademy2020.html">fabacademy2020</a>.
-      </p>
-<p class="article__tags">Tags:
-        
-        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+    This article is part of:
+    <a href="fabacademy2020.html">fabacademy2020</a>.
+  </p>
+<p class="article__tags">
+    Tags: 
+    <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <section class="article__toc">
-<h3 class="toc__title"><a href="computer-controlled-machining.html#computer-controlled-machining-cnc-machine">CNC machine ↓</a></h3>
-<h3 class="toc__title"><a href="computer-controlled-machining.html#computer-controlled-machining-fab-stool-bench-table">Fab stool/bench/table ↓</a></h3>
+<h3 class="toc__title">
+<a href="computer-controlled-machining.html#computer-controlled-machining-cnc-machine">CNC machine ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="computer-controlled-machining.html#computer-controlled-machining-fab-stool-bench-table">Fab stool/bench/table ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 </section>
 <footer>
 <p>✎ <span>Created</span> 11/03/2020</p>
 <p>⁂ <span>Updated</span> 11/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-11-computer-controlled-machining/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="computer-controlled-machining-cnc-machine">
-<h1 class="article__title">CNC machine <a href="computer-controlled-machining-cnc-machine.html">●</a></h1>
+<h1 class="article__title">
+      CNC machine <a href="computer-controlled-machining-cnc-machine.html">●</a>
+</h1>
 <section class="article__content ts">
 <h1 id="introduction">Introduction</h1>
 <p>For this week's assignement we have to characterise the CNC machine. This was done when we had the opportunity to return to the lab after the lockdown situation due to the COVID-19 pandemic.</p>
@@ -100,10 +107,13 @@
 <aside>
 <p>✎ <span>Created</span> 01/10/2020</p>
 <p>⁂ <span>Updated</span> 01/10/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-11-computer-controlled-machining/2020-10-01-computer-controlled-machining-cnc-machine/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="computer-controlled-machining-fab-stool-bench-table">
-<h1 class="article__title">Fab stool/bench/table <a href="computer-controlled-machining-fab-stool-bench-table.html">●</a></h1>
+<h1 class="article__title">
+      Fab stool/bench/table <a href="computer-controlled-machining-fab-stool-bench-table.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>I wanted to have a stool/bench/table for my apartment, a kind of furniture that can be different things because of its dimensions. So I designed and fabricated it using the large CNC at Fab Lab Barcelona.</p>
 <p>I designed it with parametric values. This process can be useful for everyone, to adapt the furnitures (or anything else) to their needs and the context in which it will be used.</p>
@@ -249,9 +259,37 @@
 <aside>
 <p>✎ <span>Created</span> 02/10/2020</p>
 <p>⁂ <span>Updated</span> 06/10/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-11-computer-controlled-machining/2020-10-02-computer-controlled-machining-fab-stool-bench-table/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

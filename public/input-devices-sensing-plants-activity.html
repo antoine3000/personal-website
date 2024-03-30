@@ -31,9 +31,9 @@
 <article class="article" id="input-devices-sensing-plants-activity">
 <h1 class="article__title">Sensing plants activity</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="input-devices.html">input-devices</a>.
-      </p>
+    This article is part of:
+    <a href="input-devices.html">input-devices</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>In the frame of my Fab Academy final project, I'm exploring how to sense the electrical activity of plants.</p>
 <figure class="md"><img alt="Listen to what we can observe from this lovely plant" loading="lazy" src="medias/input-devices-sensing-plants-activity-IMG_8664.jpg"><figcaption>Listen to what we can observe from this lovely plant</figcaption></figure>
@@ -43,8 +43,36 @@
 <footer>
 <p>✎ <span>Created</span> 15/09/2020</p>
 <p>⁂ <span>Updated</span> 15/09/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-25-input-devices/2020-09-15-input-devices-sensing-plants-activity/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

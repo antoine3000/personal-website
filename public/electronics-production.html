@@ -31,16 +31,20 @@
 <article class="article" id="electronics-production">
 <h1 class="article__title">Electronics production</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="fabacademy2020.html">fabacademy2020</a>.
-      </p>
-<p class="article__tags">Tags:
-        
-        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+    This article is part of:
+    <a href="fabacademy2020.html">fabacademy2020</a>.
+  </p>
+<p class="article__tags">
+    Tags: 
+    <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <section class="article__toc">
-<h3 class="toc__title"><a href="electronics-production.html#electronics-production-testing-the-milling-machine">Testing the compact milling machine ↓</a></h3>
-<h3 class="toc__title"><a href="electronics-production.html#electronics-production-in-circuit-programmer">Making an in-circuit programmer ↓</a></h3>
+<h3 class="toc__title">
+<a href="electronics-production.html#electronics-production-testing-the-milling-machine">Testing the compact milling machine ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="electronics-production.html#electronics-production-in-circuit-programmer">Making an in-circuit programmer ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <p>It's the 4th week of the Fab Academy, we're now exploring the process of electronics production: How to make a in-circuit programmer from a <a class="external" href="https://en.wikipedia.org/wiki/Printed_circuit_board" target="_blank">printed circuit board</a> (PCB) and several electronic components, a programmer in wich I will send code to pilot my future electronic projects.</p>
@@ -48,9 +52,12 @@
 <footer>
 <p>✎ <span>Created</span> 19/02/2020</p>
 <p>⁂ <span>Updated</span> 19/02/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-02-19-electronics-production/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="electronics-production-testing-the-milling-machine">
-<h1 class="article__title">Testing the compact milling machine <a href="electronics-production-testing-the-milling-machine.html">●</a></h1>
+<h1 class="article__title">
+      Testing the compact milling machine <a href="electronics-production-testing-the-milling-machine.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>The goal of this group assignment is for us to know the potential gaps between our traces, or how thin the traces could be. Since the machines were always occupied and the booking system at Fab Lab Barcelona was not really effective, our class couldn't have a chance to do many group tests. In the end, we were able to finish only 1 group test with the participation of the whole class.</p>
 <p>We used the Roland MonoFab SRM-20 machine to mill a test file.</p>
@@ -84,13 +91,16 @@
 <aside>
 <p>✎ <span>Created</span> 20/02/2020</p>
 <p>⁂ <span>Updated</span> 20/02/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-02-19-electronics-production/2020-02-20-electronics-production-testing-the-milling-machine/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="electronics-production-in-circuit-programmer">
-<h1 class="article__title">Making an in-circuit programmer <a href="electronics-production-in-circuit-programmer.html">●</a></h1>
-<p class="article__tags">Tags:
-            
-              <a class="tag__link" href="tag-electronics.html">#electronics</a>
+<h1 class="article__title">
+      Making an in-circuit programmer <a href="electronics-production-in-circuit-programmer.html">●</a>
+</h1>
+<p class="article__tags">
+      Tags: 
+      <a class="tag__link" href="tag-electronics.html">#electronics</a>
 </p>
 <section class="article__content ts">
 <blockquote>
@@ -198,9 +208,37 @@
 <aside>
 <p>✎ <span>Created</span> 21/02/2020</p>
 <p>⁂ <span>Updated</span> 21/02/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-02-19-electronics-production/2020-02-21-electronics-production-in-circuit-programmer/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

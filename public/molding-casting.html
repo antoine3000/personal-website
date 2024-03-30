@@ -31,15 +31,17 @@
 <article class="article" id="molding-casting">
 <h1 class="article__title">Molding and casting</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="fabacademy2020.html">fabacademy2020</a>.
-      </p>
-<p class="article__tags">Tags:
-        
-        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+    This article is part of:
+    <a href="fabacademy2020.html">fabacademy2020</a>.
+  </p>
+<p class="article__tags">
+    Tags: 
+    <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <section class="article__toc">
-<h3 class="toc__title"><a href="molding-casting.html#molding-casting-multiple-oloids">Multiple oloids ↓</a></h3>
+<h3 class="toc__title">
+<a href="molding-casting.html#molding-casting-multiple-oloids">Multiple oloids ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <p>For this week's assignment, I will design and mill a two-sided mold to make multiple oloids using the <em>molding and casting</em> technique. As part of the group assignment, I will explore various materials, which unfortunately I cannot do as a group due to this strange period of the COVID-19 pandemic.</p>
@@ -47,12 +49,15 @@
 <footer>
 <p>✎ <span>Created</span> 13/05/2020</p>
 <p>⁂ <span>Updated</span> 13/05/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-05-13-molding-casting/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="molding-casting-multiple-oloids">
-<h1 class="article__title">Multiple oloids <a href="molding-casting-multiple-oloids.html">●</a></h1>
-<p class="article__tags">Tags:
-            
-              <a class="tag__link" href="tag-molding-casting.html">#molding-casting</a>
+<h1 class="article__title">
+      Multiple oloids <a href="molding-casting-multiple-oloids.html">●</a>
+</h1>
+<p class="article__tags">
+      Tags: 
+      <a class="tag__link" href="tag-molding-casting.html">#molding-casting</a>
 </p>
 <section class="article__content ts">
 <figure class="md"><img alt="" loading="lazy" src="medias/molding-casting-multiple-oloids-oloid-model.png"><figcaption></figcaption></figure>
@@ -227,9 +232,37 @@ For this <em>Molding &amp; Casting</em> week, I'm going to mold an oloid and to 
 <aside>
 <p>✎ <span>Created</span> 14/05/2020</p>
 <p>⁂ <span>Updated</span> 06/10/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-05-13-molding-casting/2020-05-14-molding-casting-multiple-oloids/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

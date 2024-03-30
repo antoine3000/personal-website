@@ -31,9 +31,9 @@
 <article class="article" id="interface-application-programming-first-of-application">
 <h1 class="article__title">My first openFrameworks application</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="interface-application-programming.html">interface-application-programming</a>.
-      </p>
+    This article is part of:
+    <a href="interface-application-programming.html">interface-application-programming</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>For my first openFrameworks application, I would like to get sensor data and convert it to an interactive visual and audio piece. I'm going to use the <a class="external" href="https://learn.adafruit.com/adafruit-circuit-playground-express/overview" target="_blank">Circuit Playground Express</a> and its multiple integrated sensors and buttons to help me quickly prototype my idea.</p>
 <h1 id="installation">Installation</h1>
@@ -210,8 +210,36 @@ play the <code>cymbal</code> sound</li>
 <footer>
 <p>✎ <span>Created</span> 24/04/2020</p>
 <p>⁂ <span>Updated</span> 24/04/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-04-22-interface-application-programming/2020-04-24-interface-application-programming-first-of-application/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

@@ -31,9 +31,9 @@
 <article class="article" id="3D-scanning-printing-printing-a-test-file">
 <h1 class="article__title">Printing a test file</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="3D-scanning-printing.html">3D-scanning-printing</a>.
-      </p>
+    This article is part of:
+    <a href="3D-scanning-printing.html">3D-scanning-printing</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>For this week's group assignement, I teamed up with <a class="external" href="https://fabacademy.org/2020/labs/barcelona/students/tue-ngo/" target="_blank">Tue</a> and <a class="external" href="https://fabacademy.org/2020/labs/barcelona/students/david-prieto/" target="_blank">David</a>. We picked a <a class="external" href="https://www.thingiverse.com/thing:1363023" target="_blank">test file</a> from Thingiverse in order to test different features of one of the 3D printers we have in Fab Lab Barcelona, the <a class="external" href="https://www.creality3d.shop/products/creality-cr-10s-s5-3d-printer-diy-kit-large-printing-size-500x500x500mm" target="_blank">Creality3D CR-10 S5 3D</a>.</p>
 <figure class="md"><img alt="test file" loading="lazy" src="medias/3D-scanning-printing-printing-a-test-file-testfilecad.jpeg"><figcaption>test file</figcaption></figure>
@@ -72,8 +72,36 @@ To prepare the g-code, we have to <em>slice</em> our 3D model (.STL), to simulat
 <footer>
 <p>✎ <span>Created</span> 26/02/2020</p>
 <p>⁂ <span>Updated</span> 26/02/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-02-26-3D-scanning-printing/2020-02-26-3D-scanning-printing-printing-a-test-file/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

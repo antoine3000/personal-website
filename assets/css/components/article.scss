@@ -71,3 +71,11 @@
 .player {
   margin-bottom: var(--size-md);
 }
+
+.btn-vscode {
+  display: inline-block;
+  margin-top: var(--size-md);
+  &.hidden {
+    display: none;
+  }
+}

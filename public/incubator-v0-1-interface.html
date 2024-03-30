@@ -31,17 +31,45 @@
 <article class="article" id="incubator-v0-1-interface">
 <h1 class="article__title">Interface</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="incubator-v0-1.html">incubator-v0-1</a>.
-      </p>
+    This article is part of:
+    <a href="incubator-v0-1.html">incubator-v0-1</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>I decided to go screenless for this project, and to use the screen that we already have in our pocket: the one from our phone. This choice is motivated by the resource I have at my disposal. Ideally, in the next version, I would add a tiny screen to make the incubator totally independent of other technologies. I don't want to force the use of a smartphone (because I would like to stop using mine).</p>
 </section>
 <footer>
 <p>✎ <span>Created</span> 12/11/2020</p>
 <p>⁂ <span>Updated</span> 12/11/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-11-03-incubator-v0-1/2020-11-12-incubator-v0-1-interface/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

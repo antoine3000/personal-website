@@ -31,9 +31,9 @@
 <article class="article" id="incubator-v0-1-interface-example">
 <h1 class="article__title">Interface example</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="incubator-v0-1.html">incubator-v0-1</a>.
-      </p>
+    This article is part of:
+    <a href="incubator-v0-1.html">incubator-v0-1</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>To make sure I understand how a web interface is made via an ESP32, I started with a very basic example. The only thing this minimal example will do is to light on and off the RGB LED connected to the Barduino (ESP32) through the incubator shield I designed via a web interface accessible from any browser (desktop and mobile).</p>
 <video controls="" preload="auto"><source src="medias/incubator-v0-1-interface-example-esp-interface-minimal.mp4" type="video/mp4"/></video>
@@ -271,8 +271,36 @@ void loop()
 <footer>
 <p>✎ <span>Created</span> 10/11/2020</p>
 <p>⁂ <span>Updated</span> 10/11/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-11-03-incubator-v0-1/2020-11-10-incubator-v0-1-interface-example/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

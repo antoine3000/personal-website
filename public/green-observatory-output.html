@@ -31,9 +31,9 @@
 <article class="article" id="green-observatory-output">
 <h1 class="article__title">Electronics: Output</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="green-observatory.html">green-observatory</a>.
-      </p>
+    This article is part of:
+    <a href="green-observatory.html">green-observatory</a>.
+  </p>
 <section class="article__content ts" id="content">
 <h1 id="introduction">Introduction</h1>
 <p>An electronic board that receives signals from <a class="external" href="green-observatory-input.html" target="_blank">an input</a> and controls an air fhigh using an air pump and four solenoids.</p>
@@ -87,8 +87,36 @@
 <footer>
 <p>✎ <span>Created</span> 17/06/2020</p>
 <p>⁂ <span>Updated</span> 12/10/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-06-15-green-observatory/2020-06-17-green-observatory-output/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

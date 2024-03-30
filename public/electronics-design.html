@@ -31,16 +31,20 @@
 <article class="article" id="electronics-design">
 <h1 class="article__title">Electronics design</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="fabacademy2020.html">fabacademy2020</a>.
-      </p>
-<p class="article__tags">Tags:
-        
-        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+    This article is part of:
+    <a href="fabacademy2020.html">fabacademy2020</a>.
+  </p>
+<p class="article__tags">
+    Tags: 
+    <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <section class="article__toc">
-<h3 class="toc__title"><a href="electronics-design.html#electronics-design-pomodoro-timer">Pomodoro timer ↓</a></h3>
-<h3 class="toc__title"><a href="electronics-design.html#electronics-design-test-equipment">Test equipment ↓</a></h3>
+<h3 class="toc__title">
+<a href="electronics-design.html#electronics-design-pomodoro-timer">Pomodoro timer ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="electronics-design.html#electronics-design-test-equipment">Test equipment ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <p>I knew almost nothing about electronics before following the Fab Academy.I had to learn and understand the very basics of a electronic circuit and its composents, but also of electricity and its flow.</p>
@@ -50,9 +54,12 @@
 <footer>
 <p>✎ <span>Created</span> 04/03/2020</p>
 <p>⁂ <span>Updated</span> 04/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-04-electronics-design/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="electronics-design-pomodoro-timer">
-<h1 class="article__title">Pomodoro timer <a href="electronics-design-pomodoro-timer.html">●</a></h1>
+<h1 class="article__title">
+      Pomodoro timer <a href="electronics-design-pomodoro-timer.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>I use a pomodoro timer daily to help me manage my time and effort in the tasks I want to accomplish. For now, I'm using <a class="external" href="https://github.com/JaDogg/pydoro" target="_blank">Pydoro</a>, an open source pomodoro terminal timer written in Python but I would like to build mine and have it physically next to my laptop.</p>
 <blockquote>
@@ -152,10 +159,13 @@ void loop() {
 <aside>
 <p>✎ <span>Created</span> 05/03/2020</p>
 <p>⁂ <span>Updated</span> 15/09/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-04-electronics-design/2020-03-05-electronics-design-pomodoro-timer/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="electronics-design-test-equipment">
-<h1 class="article__title">Test equipment <a href="electronics-design-test-equipment.html">●</a></h1>
+<h1 class="article__title">
+      Test equipment <a href="electronics-design-test-equipment.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>This week's group assignment is about how to use the test equipment in order to test/debug/understand electronic circuits. Because of the covid-19 situtation, I did this assignment alone, from my home.</p>
 <h1 id="multimeter">Multimeter</h1>
@@ -177,9 +187,37 @@ void loop() {
 <aside>
 <p>✎ <span>Created</span> 06/03/2020</p>
 <p>⁂ <span>Updated</span> 21/09/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-04-electronics-design/2020-03-06-electronics-design-test-equipment/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

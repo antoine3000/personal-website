@@ -31,9 +31,9 @@
 <article class="article" id="electronics-design-test-equipment">
 <h1 class="article__title">Test equipment</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="electronics-design.html">electronics-design</a>.
-      </p>
+    This article is part of:
+    <a href="electronics-design.html">electronics-design</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>This week's group assignment is about how to use the test equipment in order to test/debug/understand electronic circuits. Because of the covid-19 situtation, I did this assignment alone, from my home.</p>
 <h1 id="multimeter">Multimeter</h1>
@@ -55,8 +55,36 @@
 <footer>
 <p>✎ <span>Created</span> 06/03/2020</p>
 <p>⁂ <span>Updated</span> 21/09/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-04-electronics-design/2020-03-06-electronics-design-test-equipment/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

@@ -31,9 +31,9 @@
 <article class="article" id="final-project-research-fp-structure">
 <h1 class="article__title">Structure: design and fabrication</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="final-project-research.html">final-project-research</a>.
-      </p>
+    This article is part of:
+    <a href="final-project-research.html">final-project-research</a>.
+  </p>
 <section class="article__content ts" id="content">
 <figure class="md"><img alt="structure overview" loading="lazy" src="medias/final-project-research-fp-structure-structure-overview-01.png"><figcaption>structure overview</figcaption></figure>
 <figure class="md"><img alt="structure detail" loading="lazy" src="medias/final-project-research-fp-structure-structure-detail-01.png"><figcaption>structure detail</figcaption></figure>
@@ -41,8 +41,36 @@
 <footer>
 <p>✎ <span>Created</span> 02/06/2020</p>
 <p>⁂ <span>Updated</span> 02/06/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-01-15-final-project-research/2020-06-02-final-project-research-fp-structure/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

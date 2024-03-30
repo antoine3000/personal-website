@@ -31,17 +31,21 @@
 <article class="article" id="machine-design">
 <h1 class="article__title">Machine design</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="fabacademy2020.html">fabacademy2020</a>.
-      </p>
-<p class="article__tags">Tags:
-        
-        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+    This article is part of:
+    <a href="fabacademy2020.html">fabacademy2020</a>.
+  </p>
+<p class="article__tags">
+    Tags: 
+    <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 <a class="tag__link" href="tag-to-review.html">#to-review</a>
 </p>
 <section class="article__toc">
-<h3 class="toc__title"><a href="machine-design.html#machine-design-making-the-field">Making the field ↓</a></h3>
-<h3 class="toc__title"><a href="machine-design.html#machine-design-coding-electronics">Coding the electronics ↓</a></h3>
+<h3 class="toc__title">
+<a href="machine-design.html#machine-design-making-the-field">Making the field ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="machine-design.html#machine-design-coding-electronics">Coding the electronics ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <h1 id="introduction">Introduction</h1>
@@ -62,9 +66,12 @@
 <footer>
 <p>✎ <span>Created</span> 01/06/2020</p>
 <p>⁂ <span>Updated</span> 10/11/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-06-01-machine-design/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="machine-design-making-the-field">
-<h1 class="article__title">Making the field <a href="machine-design-making-the-field.html">●</a></h1>
+<h1 class="article__title">
+      Making the field <a href="machine-design-making-the-field.html">●</a>
+</h1>
 <section class="article__content ts">
 <h1 id="mounting-plate">Mounting plate</h1>
 <p>I designed and laser-cut a mounting plate made of acrylic (<code>10 mm</code>) with the imprints of our elements (NEMA17 stepper motor and solenoid) in order to be able to fix our elements to the structure, and thus make it move when the stepper motor is actuated.</p>
@@ -93,10 +100,13 @@
 <aside>
 <p>✎ <span>Created</span> 09/11/2020</p>
 <p>⁂ <span>Updated</span> 09/11/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-06-01-machine-design/2020-11-09-machine-design-making-the-field/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="machine-design-coding-electronics">
-<h1 class="article__title">Coding the electronics <a href="machine-design-coding-electronics.html">●</a></h1>
+<h1 class="article__title">
+      Coding the electronics <a href="machine-design-coding-electronics.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>The following code does two main things for our Pong Machine. The first is the calibration of the stepper motor, in order to know how many steps separate the beginning from the end of the rail, and therefore to know how to move the paddle. The second is to update the position of the motor according to any crossed lines in the field, in order to follow the ball. Later, it will actuate the solenoid to push the ball forward.</p>
 <h1 id="calibration">Calibration</h1>
@@ -295,9 +305,37 @@ void loop()
 <aside>
 <p>✎ <span>Created</span> 10/11/2020</p>
 <p>⁂ <span>Updated</span> 10/11/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-06-01-machine-design/2020-11-10-machine-design-coding-electronics/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

@@ -34,13 +34,13 @@
 <section class="index__list">
 <div class="index__item card">
 <a class="index__link" href="meditation-link.html">
-<figure class="md"><img alt="" class="index__img" loading="lazy" src="medias/internet-of-tricks-medias/meditation-link-IMG_0209.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="index__img" loading="lazy" src="medias/meditation-link-IMG_0209.jpg"><figcaption></figcaption></figure>
 <h2 class="index__title">Meditation Link</h2>
 </a>
 </div>
 <div class="index__item card">
 <a class="index__link" href="smart-gardening-station.html">
-<figure class="md"><img alt="" class="index__img" loading="lazy" src="medias/internet-of-tricks-medias/smart-gardening-station-IMG_9967.jpg"><figcaption></figcaption></figure>
+<figure class="md"><img alt="" class="index__img" loading="lazy" src="medias/smart-gardening-station-IMG_9967.jpg"><figcaption></figcaption></figure>
 <h2 class="index__title">Smart Gardening Station</h2>
 </a>
 </div>
@@ -52,8 +52,36 @@
 <footer>
 <p>✎ <span>Created</span> 10/02/2023</p>
 <p>⁂ <span>Updated</span> 10/02/2023</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2023-02-10-internet-of-tricks/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

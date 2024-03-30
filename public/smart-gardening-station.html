@@ -31,9 +31,9 @@
 <article class="article" id="smart-gardening-station">
 <h1 class="article__title">Smart Gardening Station</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="internet-of-tricks.html">internet-of-tricks</a>.
-      </p>
+    This article is part of:
+    <a href="internet-of-tricks.html">internet-of-tricks</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>A smart device connected to a plant, which measures the soil moisture level, the ambient temperature and humidity and based on the data collected it waters the plant to meet its needs. The data is published online and a web interface allows direct interaction with the gardening station.</p>
 <figure class="md"><img alt="" loading="lazy" src="medias/smart-gardening-station-IMG_9961.jpg"><figcaption></figcaption></figure>
@@ -99,8 +99,36 @@ Interface: <a class="external" href="http://127.0.0.1:1880/ui" target="_blank">h
 <footer>
 <p>✎ <span>Created</span> 11/02/2023</p>
 <p>⁂ <span>Updated</span> 11/02/2023</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2023-02-10-internet-of-tricks/2023-02-11-smart-gardening-station/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

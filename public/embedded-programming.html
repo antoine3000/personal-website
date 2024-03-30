@@ -31,20 +31,32 @@
 <article class="article" id="embedded-programming">
 <h1 class="article__title">Embedded programming</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="fabacademy2020.html">fabacademy2020</a>.
-      </p>
-<p class="article__tags">Tags:
-        
-        <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
+    This article is part of:
+    <a href="fabacademy2020.html">fabacademy2020</a>.
+  </p>
+<p class="article__tags">
+    Tags: 
+    <a class="tag__link" href="tag-fab-academy-assignments.html">#fab-academy-assignments</a>
 </p>
 <section class="article__toc">
-<h3 class="toc__title"><a href="embedded-programming.html#embedded-programming-pomodoro-code">Pomodoro code ↓</a></h3>
-<h3 class="toc__title"><a href="embedded-programming.html#embedded-programming-datasheet">How to read a datasheet ↓</a></h3>
-<h3 class="toc__title"><a href="embedded-programming.html#embedded-programming-attiny1614">Programming the ATtiny1614 ↓</a></h3>
-<h3 class="toc__title"><a href="embedded-programming.html#embedded-programming-esp32-barduino">Programming the ESP32 — Barduino ↓</a></h3>
-<h3 class="toc__title"><a href="embedded-programming.html#embedded-programming-platformio">PlatformIO ↓</a></h3>
-<h3 class="toc__title"><a href="embedded-programming.html#embedded-programming-arduino-ide">Arduino IDE ↓</a></h3>
+<h3 class="toc__title">
+<a href="embedded-programming.html#embedded-programming-pomodoro-code">Pomodoro code ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="embedded-programming.html#embedded-programming-datasheet">How to read a datasheet ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="embedded-programming.html#embedded-programming-attiny1614">Programming the ATtiny1614 ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="embedded-programming.html#embedded-programming-esp32-barduino">Programming the ESP32 — Barduino ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="embedded-programming.html#embedded-programming-platformio">PlatformIO ↓</a>
+</h3>
+<h3 class="toc__title">
+<a href="embedded-programming.html#embedded-programming-arduino-ide">Arduino IDE ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <p>Two weeks ago, I designed a pomodoro timer during the <a class="external" href="fabac-assignments-electronics-design.html" target="_blank">Electronics design</a> week. It's now time to program it. I'm going to write the piece of code that will light my LEDs as time goes by and find a way to send it to the ATtiny1614 chip. I'm going to focus on the latter: how to send a program (= program) a chip. Well, that was the plan.</p>
@@ -55,9 +67,12 @@
 <footer>
 <p>✎ <span>Created</span> 18/03/2020</p>
 <p>⁂ <span>Updated</span> 18/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-18-embedded-programming/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="embedded-programming-pomodoro-code">
-<h1 class="article__title">Pomodoro code <a href="embedded-programming-pomodoro-code.html">●</a></h1>
+<h1 class="article__title">
+      Pomodoro code <a href="embedded-programming-pomodoro-code.html">●</a>
+</h1>
 <section class="article__content ts">
 <h1 id="how-i-want-to-use-my-pomodoro">How I want to use my pomodoro</h1>
 <ul>
@@ -165,10 +180,13 @@ void loop() {
 <aside>
 <p>✎ <span>Created</span> 18/03/2020</p>
 <p>⁂ <span>Updated</span> 18/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-18-embedded-programming/2020-03-18-embedded-programming-pomodoro-code/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="embedded-programming-datasheet">
-<h1 class="article__title">How to read a datasheet <a href="embedded-programming-datasheet.html">●</a></h1>
+<h1 class="article__title">
+      How to read a datasheet <a href="embedded-programming-datasheet.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>Reading a datasheet isn't the easiest thing to do. It is full of technical details that often interfere with the actual data one can look after.</p>
 <p>I'll now take a tour of the things that seem important to me when reading a datasheet. And for that, we'll have a look at the <a class="external" href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny1614-16-17-DataSheet-DS40002204A.pdf" target="_blank">datasheet of the ATTiny1614</a> from Microship.</p>
@@ -188,10 +206,13 @@ void loop() {
 <aside>
 <p>✎ <span>Created</span> 19/03/2020</p>
 <p>⁂ <span>Updated</span> 19/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-18-embedded-programming/2020-03-19-embedded-programming-datasheet/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="embedded-programming-attiny1614">
-<h1 class="article__title">Programming the ATtiny1614 <a href="embedded-programming-attiny1614.html">●</a></h1>
+<h1 class="article__title">
+      Programming the ATtiny1614 <a href="embedded-programming-attiny1614.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>The ATtiny1614 isn't yet supported by PlatformIO and therefore needs another method to be programmed. Fortunately, <a class="external" href="https://github.com/mraardvark/pyupdi" target="_blank">pyupdi</a> is here! Pyupdi is a Python UPDI driver for programming the "new" tinyAVR and megaAVR devices.</p>
 <h2 id="connectivity">Connectivity</h2>
@@ -215,10 +236,13 @@ pyupdi.py -d tiny1614 -c /dev/ttyUSB0 -b 9600 -f /tmp/arduino_build_342195/Blink
 <aside>
 <p>✎ <span>Created</span> 20/03/2020</p>
 <p>⁂ <span>Updated</span> 20/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-18-embedded-programming/2020-03-20-embedded-programming-attiny1614/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="embedded-programming-esp32-barduino">
-<h1 class="article__title">Programming the ESP32 — Barduino <a href="embedded-programming-esp32-barduino.html">●</a></h1>
+<h1 class="article__title">
+      Programming the ESP32 — Barduino <a href="embedded-programming-esp32-barduino.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>We have been asked to assemble a Barduino few hours before the lab lockdown due to the coronavirus, in order to be able to experiment with it later at home.</p>
 <blockquote>
@@ -265,10 +289,13 @@ framework = arduino
 <aside>
 <p>✎ <span>Created</span> 21/03/2020</p>
 <p>⁂ <span>Updated</span> 21/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-18-embedded-programming/2020-03-21-embedded-programming-esp32-barduino/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="embedded-programming-platformio">
-<h1 class="article__title">PlatformIO <a href="embedded-programming-platformio.html">●</a></h1>
+<h1 class="article__title">
+      PlatformIO <a href="embedded-programming-platformio.html">●</a>
+</h1>
 <section class="article__content ts">
 <p><a class="external" href="https://platformio.org/" target="_blank">PlatformIO</a> is a cross-platform, cross-architecture and multiple framework tool for embedded programming. It replaces Arduino IDE and offers a lot more subtilities and flexibility to write organized code for micro-controllers.</p>
 <p>I use PlatformIO as a replacement for Arduino IDE because it allows me to use the text editor I want (I use <a class="external" href="https://neovim.io/" target="_blank">Neovim</a>, an hyperextensible Vim-based text editor) and because it integrates librairies of more than 700 differents boards, including the ones I use. It also has a unified debugger and a static code analyze which seems super useful for large scale projects.</p>
@@ -318,10 +345,13 @@ lib_deps =
 <aside>
 <p>✎ <span>Created</span> 22/03/2020</p>
 <p>⁂ <span>Updated</span> 22/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-18-embedded-programming/2020-03-22-embedded-programming-platformio/_index.md">✎ vscode</a>
 </aside>
 </article>
 <article class="article--sub" id="embedded-programming-arduino-ide">
-<h1 class="article__title">Arduino IDE <a href="embedded-programming-arduino-ide.html">●</a></h1>
+<h1 class="article__title">
+      Arduino IDE <a href="embedded-programming-arduino-ide.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>One can also use Arduino IDE to load a piece of code into a device. It works perfectly well even if this solution is more basic and doesn't allow a lot of fine tuning. Because this software is well maintained and massively used, it makes it a very good tool for quickly prototyping without detours.</p>
 <ol>
@@ -334,9 +364,37 @@ lib_deps =
 <aside>
 <p>✎ <span>Created</span> 23/03/2020</p>
 <p>⁂ <span>Updated</span> 23/03/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-03-18-embedded-programming/2020-03-23-embedded-programming-arduino-ide/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

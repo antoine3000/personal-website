@@ -31,9 +31,9 @@
 <article class="article" id="project-management-my-computer">
 <h1 class="article__title">My computer</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="project-management.html">project-management</a>.
-      </p>
+    This article is part of:
+    <a href="project-management.html">project-management</a>.
+  </p>
 <section class="article__content ts" id="content">
 <p>Few months ago, I decided to switch from the closed Apple ecosystem to the wonderful and open world of Linux. I'm running <a class="external" href="https://elementary.io/" target="_blank">Elementary OS</a>, a distribution based on Ubuntu, on a mid-2014 macbook pro. This machine isn't the more convenient to run a Linux distribution but I will keep using it as long as I can, even if I have some tiny hardware issues, simply because the more sustainable computer is the one I already have.</p>
 <ul>
@@ -48,8 +48,36 @@
 <footer>
 <p>✎ <span>Created</span> 04/02/2020</p>
 <p>⁂ <span>Updated</span> 04/02/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-02-03-project-management/2020-02-04-project-management-my-computer/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

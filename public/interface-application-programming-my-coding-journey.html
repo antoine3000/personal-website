@@ -31,9 +31,9 @@
 <article class="article" id="interface-application-programming-my-coding-journey">
 <h1 class="article__title">My coding journey</h1>
 <p class="article__parent">
-        This article is part of:
-        <a href="interface-application-programming.html">interface-application-programming</a>.
-      </p>
+    This article is part of:
+    <a href="interface-application-programming.html">interface-application-programming</a>.
+  </p>
 <section class="article__content ts" id="content">
 <h1 id="processing-java-javascript">Processing (Java / Javascript)</h1>
 <p>In art school, I had two years of digital art workshops. The main tool we used in this class was <a class="external" href="https://processing.org/" target="_blank">Processing</a>. And it was so refreshing. Being able to produce an artistic installation with algorithms was something I was looking for. But it was also the rise of another movement: Internet culture. This quickly made me drop Processing for its javascript version, <a class="external" href="https://p5js.org/" target="_blank">p5js</a> and html/css, in order to create websites. It was not really good, Processing (p5js) is not so exciting when it is stuck in a browser. But the mix of graphic design and coding was definitely the right direction for me. I had the insight I needed with Processing and the motivation to continue creating websites, and then to found my web studio.</p>
@@ -53,8 +53,36 @@
 <footer>
 <p>✎ <span>Created</span> 23/04/2020</p>
 <p>⁂ <span>Updated</span> 23/04/2020</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2020-09-01-fabacademy2020/2020-04-22-interface-application-programming/2020-04-23-interface-application-programming-my-coding-journey/_index.md">↗ vscode</a>
 </footer>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>

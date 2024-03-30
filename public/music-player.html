@@ -31,7 +31,9 @@
 <article class="article" id="music-player">
 <h1 class="article__title">Music player</h1>
 <section class="article__toc">
-<h3 class="toc__title"><a href="music-player.html#music-player-references">References ↓</a></h3>
+<h3 class="toc__title">
+<a href="music-player.html#music-player-references">References ↓</a>
+</h3>
 </section>
 <section class="article__content ts" id="content">
 <p>I would like to have an easy solution to listen to music on the go. My ideal player has an SD card that contains music folders, a 3.5 mm jack input, a removable battery, a black and white screen that shows a minimal interface, and it runs on open-source software.</p>
@@ -40,9 +42,12 @@
 <footer>
 <p>✎ <span>Created</span> 04/01/2021</p>
 <p>⁂ <span>Updated</span> 04/01/2021</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2021-01-04-music-player/_index.md">↗ vscode</a>
 </footer>
 <article class="article--sub" id="music-player-references">
-<h1 class="article__title">References <a href="music-player-references.html">●</a></h1>
+<h1 class="article__title">
+      References <a href="music-player-references.html">●</a>
+</h1>
 <section class="article__content ts">
 <p>Here is a collection of references on DIY music player, music related hardware or anything that could help me in my quest of making my music player.</p>
 <ul>
@@ -58,9 +63,37 @@
 <aside>
 <p>✎ <span>Created</span> 04/01/2021</p>
 <p>⁂ <span>Updated</span> 04/01/2021</p>
+<a class="btn-vscode hidden" href="vscode://file/Users/antoine/repo/websites/personal-website/content/2021-01-04-music-player/2021-01-04-music-player-references/_index.md">✎ vscode</a>
 </aside>
 </article>
 </article>
+<script>
+  // show vscode button in local only
+  var isLocal = window.location.href.startsWith("file://");
+  var btnsCode = document.getElementsByClassName("btn-vscode");
+  for (var i = 0; i < btnsCode.length; i++) {
+    var btn = btnsCode[i];
+    if (isLocal) {
+      btn.classList.remove("hidden");
+    }
+  }
+  // shortcut for vscode button
+  if (isLocal) {
+    var firstBtnCode = btnsCode[0];
+    function handleClick() {
+      firstBtnCode.click();
+    }
+    firstBtnCode.addEventListener("click", handleClick);
+    function handleKeyboardShortcut(event) {
+      if (event.ctrlKey && event.shiftKey && event.key === "D") {
+        if (firstBtnCode) {
+          firstBtnCode.click();
+        }
+      }
+    }
+    document.addEventListener("keydown", handleKeyboardShortcut);
+  }
+</script>
 <!-- /content -->
 <footer class="footer">
 <p>antoinejaunard.com ☼ 2024 — <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> — <a href="https://antoinejaunard.com/rss.xml">RSS Feed</a></p>
