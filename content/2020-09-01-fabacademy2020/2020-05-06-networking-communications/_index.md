@@ -1,6 +1,5 @@
 ---
 title: Networking and communications
-tags: fab-academy-assignments
 ---
 
 For this week's assignment, I will connect two [ESP8266](http://esp8266.net) / [NodeMCU](https://www.nodemcu.com/index_en.html) together on the WiFi network and exchange data between them.

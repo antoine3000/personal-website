@@ -1,6 +1,5 @@
 ---
 title: Computer-aided design
-tags: fab-academy-assignments
 open: True
 ---
 

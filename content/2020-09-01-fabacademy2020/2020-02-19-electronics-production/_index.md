@@ -1,6 +1,5 @@
 ---
 title: Electronics production
-tags: fab-academy-assignments
 featured_image: ftdi-updi.jpg
 open: True
 ---

@@ -1,6 +1,5 @@
 ---
 title: Electronics design
-tags: fab-academy-assignments
 open: True
 ---
 

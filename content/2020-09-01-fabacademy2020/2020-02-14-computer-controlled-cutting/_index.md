@@ -1,6 +1,5 @@
 ---
 title: Computer-controlled cutting
-tags: fab-academy-assignments
 featured_image: password-final.jpg
 open: True
 ---

@@ -1,6 +1,5 @@
 ---
 title: Embedded programming
-tags: fab-academy-assignments
 open: True
 ---
 

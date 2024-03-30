@@ -1,6 +1,5 @@
 ---
 title: Interface application programming
-tags: fab-academy-assignments
 open: True
 ---
 

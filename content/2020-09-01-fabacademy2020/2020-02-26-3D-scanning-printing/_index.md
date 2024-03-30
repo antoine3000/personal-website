@@ -1,6 +1,5 @@
 ---
 title: 3D scanning and printing
-tags: fab-academy-assignments
 open: True
 ---
 

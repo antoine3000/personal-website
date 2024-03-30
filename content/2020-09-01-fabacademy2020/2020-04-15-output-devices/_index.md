@@ -1,6 +1,5 @@
 ---
 title: Output devices
-tags: fab-academy-assignments
 last_update: 2020-11-02
 open: True
 ---

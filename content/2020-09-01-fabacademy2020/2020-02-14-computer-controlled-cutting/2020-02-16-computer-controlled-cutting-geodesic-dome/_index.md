@@ -1,6 +1,5 @@
 ---
 title: Geodesic dome
-tags: laser-cutting, structure
 ---
 
 A [geodesic dome](https://en.wikipedia.org/wiki/Geodesic_dome) is a structure based on a geodesic polyhedron. The triangular elements of the dome are structurally rigid and distribute the structural stress throughout the structure, making geodesic domes able to withstand very heavy loads for their size.

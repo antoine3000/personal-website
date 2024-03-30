@@ -1,6 +1,5 @@
 ---
 title: Principles and practices
-tags: fab-academy-assignments
 ---
 
 # Fab Academy

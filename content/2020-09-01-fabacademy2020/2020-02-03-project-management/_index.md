@@ -1,6 +1,5 @@
 ---
 title: Project management
-tags: fab-academy-assignments
 last_update: 2020-09-04
 open: True
 ---

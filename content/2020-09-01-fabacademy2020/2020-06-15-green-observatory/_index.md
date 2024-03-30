@@ -1,6 +1,5 @@
 ---
 title: The Green Observatory
-tags: fab-academy-assignments
 featured_image: overview.jpg
 open: True
 ---
