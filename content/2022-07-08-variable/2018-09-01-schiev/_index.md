@@ -1,6 +1,7 @@
 ---
 title: Schiev Festival
 tags: website
+featured_image: schiev-2.jpeg
 ---
 
 Design and front-end development of the Schiev Festival website, "a simple music festival" featuring concerts, talks & a label market.
