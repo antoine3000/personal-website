@@ -580,6 +580,10 @@ body {
   .card .tags__link {
     margin-bottom: var(--size-xxs); }
 
+.card-parent img,
+.card-parent .index__color {
+  border-radius: 100%; }
+
 .article__toc {
   display: inline-block;
   border: var(--border-sm) dotted var(--base-color);

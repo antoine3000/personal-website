@@ -1,6 +1,7 @@
 ---
 title: Variable
 open: True
+featured_image: schiev-2.jpeg
 ---
 
 Together with Constant Mathieu, we had run a small but good webdesign studio called [Variable](http://variable.club/), from 2014 to 2019. We had put emphasis on creating our own custom tools to stay task-specific, light and versatile.

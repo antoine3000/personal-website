@@ -1,6 +1,7 @@
 ---
 title: Kodak ColorPlus 200 - 1346
 tags: photography
+featured_image: 08.jpg
 ---
 
 
@@ -13,7 +14,7 @@ These photos were taken between September and October 2020 in Barcelona, Badalon
 ![](large:05.jpg)
 ![](large:06.jpg)
 ![](large:07.jpg)
-![](large:08.jpg)
+![](large:08.jpg:flux)
 ![](large:09.jpg)
 ![](large:10.jpg)
 ![](large:11.jpg)
