@@ -1,6 +1,7 @@
 ---
 title: The Word Radio
 tags: website
+featured_image: thewordradio-1.jpeg
 ---
 
 Front-end development of The Word Radio website, an online community radio run by The Word from studios located in Brussels (Belgium).

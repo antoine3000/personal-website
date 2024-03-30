@@ -549,6 +549,10 @@ body {
   .page--tag .index--grid .index__list {
     grid-template-columns: repeat(1, 1fr); } }
 
+.page--tag .card img {
+  object-fit: contain;
+  object-position: bottom; }
+
 .card {
   display: block; }
   .card img,
@@ -557,10 +561,10 @@ body {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border: 1px solid var(--base-color);
-    background-color: var(--base-color); }
+    border-radius: var(--size-sm); }
   .card .index__color {
-    background-color: var(--body-color); }
+    background-color: var(--body-color);
+    border: 1px solid var(--base-color); }
     .card .index__color:after {
       content: "";
       display: block;
@@ -580,9 +584,8 @@ body {
   .card .tags__link {
     margin-bottom: var(--size-xxs); }
 
-.card-parent img,
-.card-parent .index__color {
-  border-radius: 100%; }
+.card-parent {
+  grid-column-start: span 2; }
 
 .article__toc {
   display: inline-block;
