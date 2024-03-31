@@ -1,7 +1,7 @@
 ---
 title: Dok
-open: True
 featured_image: dok-system-min.png
+content_first: True
 ---
 
 In 2020, I started writing the software that would allow me to publish my personal website online. I've called it Dok, and it's my customised static site generation tool, which meets all my needs perfectly.
