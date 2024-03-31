@@ -347,14 +347,15 @@ img {
     border-radius: var(--size-sm); }
   .card .index__color {
     background-color: var(--body-color);
-    border: 1px solid var(--base-color); }
+    border: 1px solid var(--base-color);
+    display: flex;
+    align-items: center; }
     .card .index__color:after {
       content: "";
       display: block;
-      width: 100%;
+      flex: 1;
       height: 1px;
       position: relative;
-      top: 50%;
       background-color: var(--base-color);
       transform: rotate(-45deg); }
   .card .index__link {

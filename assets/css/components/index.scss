@@ -123,13 +123,14 @@
   .index__color {
     background-color: var(--body-color);
     border: 1px solid var(--base-color);
+    display: flex;
+    align-items: center;
     &:after {
       content: "";
       display: block;
-      width: 100%;
+      flex: 1;
       height: 1px;
       position: relative;
-      top: 50%;
       background-color: var(--base-color);
       transform: rotate(-45deg);
     }
