@@ -131,7 +131,7 @@
       position: relative;
       top: 50%;
       background-color: var(--base-color);
-      rotate: -45deg;
+      transform: rotate(-45deg);
     }
   }
   .index__link {

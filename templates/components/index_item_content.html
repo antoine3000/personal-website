@@ -1,4 +1,4 @@
-<div class="index__item card {% if article['childs'] and not article['has_parent'] %} card--parent {% elif article['childs'] and article['has_parent'] %} card--parentchild {% endif %}">
+<div class="index__item card {% if not article['has_parent'] %} card--parent {% elif article['childs'] and article['has_parent'] %} card--parentchild {% endif %}">
   <a class="index__link" href="{{ article['url'] }}">
     {% if article['featured_image'] %}
     <img
