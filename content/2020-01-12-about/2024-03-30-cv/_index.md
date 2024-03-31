@@ -4,6 +4,8 @@ title: Curriculum Vitae
 
 Well, it's not really my CV, but I imagine this page will soon become so. In the meantime, here are a few highlights of my career.
 
+![diverge-explore-converge.png](diverge-explore-converge.png)
+
 ## Domingo Club (2021-)
 
 In march 2021, together with Maud Bausier, we founded [Domingo Club](https://domingoclub.com/), an on/offline space where we design a plant-based and transparent future food system. Our current focus is on our open-source fermenter, a device that promotes plant-based proteins and open-source tools so that anyone can make them at home. We dedicate practice to the benefit of our health, our communities and our planet.
