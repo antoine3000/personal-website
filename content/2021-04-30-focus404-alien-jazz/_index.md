@@ -1,5 +1,6 @@
 ---
 title: Focus404 ↝ Alien Jazz
+featured_image: alien-jazz-cover.jpg
 ---
 
 At the end of December 2020, I felt the need to create a musical project. One of my first. I went for several days, alone, to a yurt surrounded by llamas located in the south of Catalonia, Spain.  I spent my days walking, cycling, practicing yoga and meditation. And my nights composing this album.

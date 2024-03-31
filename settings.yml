@@ -1,13 +1,15 @@
 title: "antoinejaunard.com"
 description: "documentation"
+language: en
 main_url: "https://antoinejaunard.com"
+img_max_width: 1800
 introduction: "This website ✺ is my digital studio, a place where I can experiment without ⁂ constraints. It's also my personal assistant, it helps me when I'm not sure how to do ✿ something I've done before. It invites me to write (and then find) my personal knowledge ⧉ online. Welcome."
 navigation:
   "antoinejaunard.com": "index"
   "content": "content"
   # "flux": "flux"
   "about": "about"
-# index: [meditation-link, smart-gardening-station]
+index: [meditation-link, smart-gardening-station]
 flux:
   visibility: False
   title: "flux"

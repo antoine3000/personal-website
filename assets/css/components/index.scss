@@ -1,56 +1,85 @@
 // Index
-
-.index--list .index__item {
-  margin-bottom: var(--size-xs);
+.index {
+  @extend %container-padding;
+  & + .index {
+    margin-top: var(--size-lg);
+  }
 }
-
-.index--tags .index__item:not(:last-child) {
-  margin-bottom: var(--size-sm);
+.index__title {
+  @extend %ts-title-0;
+  margin-bottom: var(--size-xl);
+}
+.index__list,
+.index__grid {
+  &,
+  &--sub {
+    list-style: none;
+  }
 }
 
 .index__item {
   margin-bottom: var(--size-xl);
 }
 
-.index__list--sub {
-  margin-top: var(--size-xxs);
+// Index list
+.index--list {
   .index__item {
+    padding-left: var(--size-md);
+    position: relative;
+    margin-bottom: var(--size-xs);
+    &:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      top: 0.1em;
+    }
+  }
+  .index__item--sub {
+    padding-left: var(--size-xl);
+    position: relative;
+    &:before {
+      content: "∟";
+      position: absolute;
+      left: 0;
+    }
+  }
+  .index__tags,
+  .index__update {
+    @extend %ts-small;
+    display: inline-block;
     margin-bottom: var(--size-xxs);
   }
 }
 
-// grid
-.grid {
-  list-style: none;
-  display: grid;
-  grid-gap: var(--size-xl);
-  margin-top: var(--size-xxl);
-  @include media(">=sm") {
-    grid-template-columns: repeat(2, 1fr);
+// Index tags
+.index--tags {
+  .index__list {
+    display: flex;
+    flex-wrap: wrap;
   }
-  @include media(">=xxl") {
+  .index__item:not(:last-child) {
+    margin-right: var(--size-sm);
+    margin-bottom: var(--size-sm);
+  }
+}
+
+// Index grid
+
+.index--grid .index__list {
+  display: grid;
+  grid-column-gap: var(--size-md);
+  grid-template-columns: repeat(2, 1fr);
+  @include media(">md") {
     grid-template-columns: repeat(3, 1fr);
   }
-  .item__link {
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    background-color: transparent;
-    color: var(--base-color);
-    &:hover {
-      background-color: transparent;
-    }
+  .index__item {
+    margin-bottom: var(--size-lg);
   }
-  .item__img {
-    display: block;
-    width: 100%;
+  img {
+    max-width: 100%;
   }
-  .item__title {
-    display: block;
-    @extend %ts-title-3;
-    margin-top: var(--size-xs);
+  figcaption {
+    @extend %ts-small;
   }
 }
 
@@ -70,8 +99,19 @@
   }
 }
 
+
+.page--homepage {
+  .index--grid .index__list {
+    grid-template-columns: repeat(1, 1fr);
+    @include media(">=sm") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
 .card {
   display: block;
+  position: relative;
   img,
   .index__color {
     display: block;
@@ -120,3 +160,4 @@
     display: inline-block;
   }
 }
+

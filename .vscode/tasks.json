@@ -10,16 +10,6 @@
               "isDefault": true
           },
           "problemMatcher": []
-      },
-      {
-        "label": "Update Remote",
-        "type": "shell",
-        "command": "./scripts/update-remote.sh",
-        "group": {
-            "kind": "build",
-            "isDefault": true
-        },
-        "problemMatcher": []
-    }
+      }
   ]
 }

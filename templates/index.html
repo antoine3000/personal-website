@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% set page_class = 'homepage' %} {% block content %}
+
+<article class="intro">{{ settings.introduction }}</article>
+
+{% if settings.index %}
+<section class="index index--grid">
+  <section class="index__list">
+    {% for article in settings.index %} {% set slug = article %} {% set article
+    = articles[article] %}
+    <div class="index__item card">
+      <a class="index__link" href="{{ article['url'] }}">
+        {% if article['featured_image'] %}
+        <img
+          src="medias/{{ article['slug'] }}-{{ article['featured_image'] }}"
+          alt="{{ article['featured_desc'] }}"
+          class="index__img"
+          loading="lazy"
+        />
+        {% else %}
+        <div class="index__color"></div>
+        {% endif %}
+        <h2 class="index__title">{{ article['title'] }}</h2>
+        {% if article['featured_desc'] %}
+        <p class="item__desc">{{ article['featured_desc'] }}</p>
+        {% endif %}
+      </a>
+    </div>
+    {% endfor %}
+  </section>
+</section>
+{% endif %}
+{% endblock %}

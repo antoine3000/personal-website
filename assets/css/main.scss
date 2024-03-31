@@ -1,21 +1,16 @@
-// DOK
-@import "dok/assets/css/main.scss";
-// Personal
+// Utils
+@import "utils/reset.scss";
+@import "utils/fonts.scss";
+@import "utils/variables.scss";
+@import "utils/mediaqueries.scss";
 @import "utils/typography.scss";
-@import "utils/mixins.scss";
-@import "components/home.scss";
+// Components
+@import "components/base.scss";
 @import "components/index.scss";
+@import "components/home.scss";
 @import "components/article.scss";
 @import "components/device.scss";
-
-
-:root {
-  --body-color: #cfcfcf;
-  --base-color: #000000;
-  --action-color: var(--base-color);
-  --special-color: var(--base-color);
-  --content-max-width: 720px;
-}
+@import "components/admonition.scss";
 
 html {
   font-size: 16px;
@@ -25,23 +20,11 @@ html {
 }
 
 body {
+  @extend %font-body;
+  background: var(--body-color);
+  color: var(--base-color);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   ::-moz-selection { background-color: var(--action-color); color: var(--body-color); }
   ::selection { background-color: var(--action-color); color: var(--body-color); }
-}
-
-.index__item--sub,
-.index:not(.index--featured) .index__link {
-  @extend %ts-body;
-}
-
-.header {
-  margin-bottom: var(--size-md);
-}
-
-.index__title {
-  margin-bottom: var(--size-lg);
-}
-
-.article__content pre {
-  margin-bottom: var(--size-sm);
 }

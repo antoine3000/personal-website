@@ -1,6 +1,13 @@
-// Home
+// Intro
 
 .intro {
-  max-width: 100%;
+  margin-bottom: var(--size-xxl);
+  @extend %container-padding;
+  p {
+    @extend %ts-title-0;
+  }
+  small {
+    display: block;
+    margin-top: var(--size-sm);
+  }
 }
-
