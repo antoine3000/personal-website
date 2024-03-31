@@ -9,9 +9,8 @@ navigation:
   "content": "content"
   # "flux": "flux"
   "about": "about"
-index: [meditation-link, smart-gardening-station]
+# index: [meditation-link, smart-gardening-station]
 flux:
   visibility: False
   title: "flux"
   slug: "flux"
-footer: 'antoinejaunard.com ☼&nbsp;2024 — [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — [RSS Feed](https://antoinejaunard.com/rss.xml)'

@@ -24,7 +24,6 @@ body {
   background: var(--body-color);
   color: var(--base-color);
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   ::-moz-selection { background-color: var(--action-color); color: var(--body-color); }
   ::selection { background-color: var(--action-color); color: var(--body-color); }
 }

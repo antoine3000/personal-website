@@ -1,13 +1,12 @@
 :root {
   // Colors
   --base-color: #000000;
-  --body-color: #cfcfcf;
+  --body-color: #f1f0ee;
   --action-color: #000000;
   // Fonts
-  --font-body: "jetbrains-regular", Helvetica, Arial, sans-serif;
-  --font-body-italic: "jetbrains-italic", Helvetica, Arial, sans-serif;
-  --font-body-bold: "jetbrains-bold", Helvetica, Arial, sans-serif;
-  --font-body-bold-italic: "jetbrains-bold-italic", Helvetica, Arial, sans-serif;
+  --font-body: "montrealmono-regular", Helvetica, Arial, sans-serif;
+  --font-body-italic: "montrealmono-regular-italic", Helvetica, Arial, sans-serif;
+  --font-body-bold: "montrealmono-medium", Helvetica, Arial, sans-serif;
   // Size
   --size-xxs: calc(1rem / 4 * 1);
   --size-xs: calc(1rem / 4 * 2);

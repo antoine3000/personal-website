@@ -4,7 +4,8 @@
   margin-bottom: var(--size-xxl);
   @extend %container-padding;
   p {
-    @extend %ts-title-0;
+    @extend %ts-body;
+    max-width: var(--content-max-width);
   }
   small {
     display: block;

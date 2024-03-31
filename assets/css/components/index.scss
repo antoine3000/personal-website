@@ -142,14 +142,17 @@
     color: var(--base-color);
     @extend %ts-body;
     margin-top: var(--size-xs);
-    margin-bottom: var(--size-xxs);
+    margin-bottom: 0;
   }
   .tags__link {
     @extend %ts-small;
     margin-bottom: var(--size-xxs);
   }
 }
-.card-parent {
+.card--parent {
+  grid-column-start: span 3;
+}
+.card--parentchild {
   grid-column-start: span 2;
 }
 

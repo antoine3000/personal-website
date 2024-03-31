@@ -55,37 +55,30 @@ textarea {
   resize: vertical; }
 
 @font-face {
-  font-family: "jetbrains-regular";
-  src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-family: "montrealmono-regular";
+  src: url("fonts/PPNeueMontrealMono-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "jetbrains-italic";
-  src: url("fonts/JetBrainsMono-Italic.woff2") format("woff2");
+  font-family: "montrealmono-regular-italic";
+  src: url("fonts/PPNeueMontrealMono-RegularItalic.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "jetbrains-bold";
-  src: url("fonts/JetBrainsMono-Bold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "jetbrains-bold-italic";
-  src: url("fonts/JetBrainsMono-Bold-Italic.woff2") format("woff2");
+  font-family: "montrealmono-medium";
+  src: url("fonts/PPNeueMontrealMono-Medium.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 :root {
   --base-color: #000000;
-  --body-color: #cfcfcf;
+  --body-color: #f1f0ee;
   --action-color: #000000;
-  --font-body: "jetbrains-regular", Helvetica, Arial, sans-serif;
-  --font-body-italic: "jetbrains-italic", Helvetica, Arial, sans-serif;
-  --font-body-bold: "jetbrains-bold", Helvetica, Arial, sans-serif;
-  --font-body-bold-italic: "jetbrains-bold-italic", Helvetica, Arial, sans-serif;
+  --font-body: "montrealmono-regular", Helvetica, Arial, sans-serif;
+  --font-body-italic: "montrealmono-regular-italic", Helvetica, Arial, sans-serif;
+  --font-body-bold: "montrealmono-medium", Helvetica, Arial, sans-serif;
   --size-xxs: calc(1rem / 4 * 1);
   --size-xs: calc(1rem / 4 * 2);
   --size-sm: calc(1rem / 4 * 3);
@@ -101,26 +94,25 @@ textarea {
   padding-right: var(--size-xl); }
 
 .ts em strong,
-.ts strong em, .ts strong, .admonition .admonition-title, .article .index__title, .ts table th, .ts h3, .ts h2, .ts h1, .article__title, .intro p, .index__title, .ts .todo, .ts em, .ts blockquote p, body, .article figure figcaption, .card .tags__link, .index--grid .index__list figcaption, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p, .toc__title--sub, .toc__title, .card .index__title, .ts h4, .ts h5, .ts h6 {
+.ts strong em, .ts strong, .admonition .admonition-title, .article .index__title, .ts table th, .ts h3, .ts h2, .ts h1, .article__title, .index__title, .ts .todo, .ts em, .ts blockquote p, body, .article figure figcaption, .card .tags__link, .index--grid .index__list figcaption, .index--list .index__tags,
+.index--list .index__update, .tags__link,
+.tag__link, .ts blockquote blockquote p, .toc__title--sub, .toc__title, .intro p, .card .index__title, .ts h4, .ts h5, .ts h6 {
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
-  word-spacing: -0.15em; }
+  word-spacing: -0.05em; }
 
 body, .article figure figcaption, .card .tags__link, .index--grid .index__list figcaption, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p, .toc__title--sub, .toc__title, .card .index__title, .ts h4, .ts h5, .ts h6 {
+.index--list .index__update, .tags__link,
+.tag__link, .ts blockquote blockquote p, .toc__title--sub, .toc__title, .intro p, .card .index__title, .ts h4, .ts h5, .ts h6 {
   font-family: var(--font-body) !important; }
 
 .ts .todo, .ts em, .ts blockquote p {
   font-family: var(--font-body-italic); }
 
-.ts strong, .admonition .admonition-title, .article .index__title, .ts table th, .ts h3, .ts h2, .ts h1, .article__title, .intro p, .index__title {
-  font-family: var(--font-body-bold); }
-
 .ts em strong,
-.ts strong em {
-  font-family: var(--font-body-bold-italic); }
+.ts strong em, .ts strong, .admonition .admonition-title, .article .index__title, .ts table th, .ts h3, .ts h2, .ts h1, .article__title, .index__title {
+  font-family: var(--font-body-bold); }
 
 a {
   color: var(--body-color);
@@ -133,7 +125,7 @@ a {
     background-color: var(--body-color);
     text-decoration: none; }
 
-.article__title, .intro p, .index__title {
+.article__title, .index__title {
   font-size: var(--size-xxl);
   line-height: 1.2; }
 
@@ -147,13 +139,15 @@ a {
   font-size: var(--size-md); }
 
 .ts h4, .ts h5, .ts h6 {
-  font-size: var(--size-md); }
+  font-size: var(--size-md);
+  text-transform: uppercase; }
 
-.toc__title--sub, .toc__title, .card .index__title {
+.toc__title--sub, .toc__title, .intro p, .card .index__title {
   font-size: var(--size-md); }
 
 .article figure figcaption, .card .tags__link, .index--grid .index__list figcaption, .index--list .index__tags,
-.index--list .index__update, .ts blockquote blockquote p {
+.index--list .index__update, .tags__link,
+.tag__link, .ts blockquote blockquote p {
   font-size: var(--size-sm); }
 
 .ts h1, .ts h2, .ts h3, .ts h4, .ts h5, .ts h6 {
@@ -223,7 +217,9 @@ a {
   color: var(--base-color);
   border: var(--border-sm) solid var(--base-color);
   border-radius: var(--size-xs);
-  padding: 0 var(--size-xxs); }
+  padding: 0 var(--size-xxs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
 
 .article__title a {
   background: none; }
@@ -367,11 +363,14 @@ img {
   .card .index__title {
     color: var(--base-color);
     margin-top: var(--size-xs);
-    margin-bottom: var(--size-xxs); }
+    margin-bottom: 0; }
   .card .tags__link {
     margin-bottom: var(--size-xxs); }
 
-.card-parent {
+.card--parent {
+  grid-column-start: span 3; }
+
+.card--parentchild {
   grid-column-start: span 2; }
 
 .index__tags {
@@ -382,6 +381,8 @@ img {
 
 .intro {
   margin-bottom: var(--size-xxl); }
+  .intro p {
+    max-width: var(--content-max-width); }
   .intro small {
     display: block;
     margin-top: var(--size-sm); }
@@ -406,7 +407,7 @@ img {
   margin-bottom: 0; }
 
 .article__content + .index {
-  margin-top: var(--size-lg); }
+  margin-top: var(--size-xxl); }
 
 .article__featured {
   margin-top: var(--size-lg); }
@@ -519,6 +520,12 @@ img {
   .btn-vscode.hidden {
     display: none; }
 
+#about .article__title {
+  display: none; }
+
+#about .article__content {
+  margin-top: 0; }
+
 .device {
   display: inline-block; }
   .ts .device {
@@ -564,8 +571,7 @@ html {
 body {
   background: var(--body-color);
   color: var(--base-color);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased; }
+  text-rendering: optimizeLegibility; }
   body ::-moz-selection {
     background-color: var(--action-color);
     color: var(--body-color); }

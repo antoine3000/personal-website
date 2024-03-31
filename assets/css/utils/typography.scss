@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
-  word-spacing: -0.15em;
+  word-spacing: -0.05em;
 }
 
 %font-body {
@@ -19,11 +19,6 @@
 
 %font-body-bold {
   font-family: var(--font-body-bold);
-  @extend %font-base;
-}
-
-%font-body-bold-italic {
-  font-family: var(--font-body-bold-italic);
   @extend %font-base;
 }
 
@@ -60,6 +55,7 @@
 %ts-title-4 {
   @extend %font-body;
   font-size: var(--size-md);
+  text-transform: uppercase;
 }
 %ts-body {
   @extend %font-body;
@@ -161,17 +157,20 @@ a {
   }
   em strong,
   strong em {
-    @extend %font-body-bold-italic;
+    @extend %font-body-bold;
   }
 }
 
 .tags__link,
 .tag__link {
+  @extend %ts-small;
   background: none;
   color: var(--base-color);
   border: var(--border-sm) solid var(--base-color);
   border-radius: var(--size-xs);
   padding: 0 var(--size-xxs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .article__title a {
