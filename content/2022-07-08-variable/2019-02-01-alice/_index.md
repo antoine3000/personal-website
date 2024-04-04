@@ -1,6 +1,7 @@
 ---
 title: Alice Gallery
 tags: website
+featured_image: alice-1.jpeg
 ---
 
 Design and front-end development of the Alice Gallery website, an art gallery founded by Alice van den Abeele and Raphaël Cruyt and located in Brussels.

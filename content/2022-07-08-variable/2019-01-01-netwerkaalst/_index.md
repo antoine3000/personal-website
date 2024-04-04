@@ -1,6 +1,7 @@
 ---
 title: Netwerk Aalst
 tags: website
+featured_image: netwerk-3.jpeg
 ---
 
 Front-end development of the Netwerk Aalst website, an international center for contemporary art and an independent cinema located in Aalst, Belgium.

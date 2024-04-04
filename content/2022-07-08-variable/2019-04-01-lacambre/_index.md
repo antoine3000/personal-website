@@ -1,6 +1,7 @@
 ---
 title: La Cambre
 tags: website
+featured_image: lacambre-9.jpeg
 ---
 
 Front-end development of the La Cambre website, one of the leading schools of art and design in Belgium.
